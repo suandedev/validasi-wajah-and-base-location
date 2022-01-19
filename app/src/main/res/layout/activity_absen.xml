@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    tools:context=".AbsenActivity">
+
+	<TextView
+		android:id="@+id/pertemuan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textAlignment="center"
+		android:text="pertemuan ke"/>
+
+	<Button
+		android:id="@+id/btnCekAbsen"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="cek absen"
+		android:layout_gravity="center"/>
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeMhsActivity">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="20dp">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Dashboard Mahasiswa"
+			android:textSize="24sp"
+			android:textColor="@color/black"
+			android:textAlignment="center"
+			android:textStyle="bold"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="npm : 123"
+			android:layout_marginTop="10dp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="nama : xyz" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="jurusan : ti" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginTop="10dp"
+			>
+
+			<Button
+				android:id="@+id/btnKelasByMhs"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:background="@drawable/simple_bg1"
+				android:elevation="5dp"
+				android:text="kelas"/>
+
+			<Button
+				android:id="@+id/btnAbsen"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:background="@drawable/simple_bg1"
+				android:elevation="5dp"
+				android:text="absen"/>
+
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<TextView
+		android:id="@+id/dosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="dosen"/>
+
+	<TextView
+		android:id="@+id/kelas"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="kelas" />
+
+	<TextView
+		android:id="@+id/matkul"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="matkul" />
+
+</LinearLayout>

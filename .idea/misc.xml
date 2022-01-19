@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/drawable/simple_bg1.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_absen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_auth.xml" value="0.11820652173913043" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_matkul.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_mhs.xml" value="0.16666666666666666" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_kelas.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_pertemuan.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_state.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_kelas_by_mhs.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_matkul_all.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_pertemuan.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_state.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/single_absen_by_mhs.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
