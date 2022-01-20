@@ -31,13 +31,15 @@ public class AbsenAdapterByMhs extends ArrayAdapter<Absen> {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = context.getLayoutInflater();
 		View v = inflater.inflate(R.layout.single_absen_by_mhs, null, true);
-		TextView tvAbsen1 = (TextView) v.findViewById(R.id.absen1);
-		TextView tvAbsen2 = v.findViewById(R.id.absen2);
+		TextView tvNpm = (TextView) v.findViewById(R.id.npm);
+		TextView tvName = v.findViewById(R.id.nama);
+		TextView tvKeterangan = v.findViewById(R.id.keterangan);
 
 		Absen absen = absenList.get(position);
 
-		tvAbsen1.setText(absen.getUserId());
-		tvAbsen1.setText(absen.getKeterangan());
+		tvNpm.setText(absen.getNpm());
+		tvName.setText(absen.getMahasiswa());
+		tvKeterangan.setText(absen.getKeterangan());
 
 		return v;
 	}

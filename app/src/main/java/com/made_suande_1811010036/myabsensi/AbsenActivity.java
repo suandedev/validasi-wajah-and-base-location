@@ -31,8 +31,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.made_suande_1811010036.myabsensi.ml.Model;
 import com.made_suande_1811010036.myabsensi.model.GetMhs;
+import com.made_suande_1811010036.myabsensi.model.GetSetTime;
 import com.made_suande_1811010036.myabsensi.model.Mhs;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
+import com.made_suande_1811010036.myabsensi.model.SetTime;
 import com.made_suande_1811010036.myabsensi.rest.ApiClient;
 import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
 
@@ -105,8 +107,43 @@ public class AbsenActivity extends AppCompatActivity {
 						List<Mhs> mhsList = response.body().getListDataMhs();
 
 						npm = mhsList.get(0).getNpm();
+						
+						Call<GetSetTime> call1 = mApiInterface.getSetTime(Integer.valueOf(kelasId),Integer.valueOf(pertemuanId),Integer.valueOf(stateId));
+						call1.enqueue(new Callback<GetSetTime>() {
+							@Override
+							public void onResponse(Call<GetSetTime> call, Response<GetSetTime> response) {
+								List<SetTime> setTimeList = response.body().getListDataSetTime();
 
-						doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
+								int paramIn = Integer.valueOf(setTimeList.get(0).getParamIn());
+								int paramOut = Integer.valueOf(setTimeList.get(0).getParamOut());
+								int time = Integer.valueOf(curentTime);
+
+								Log.d(TAG, "onResponse: " + paramIn + " " + paramOut + " " + time);
+
+								if (predictName == null) {
+									Toast.makeText(getApplicationContext(), "foto tidak boleh kosong", Toast.LENGTH_SHORT).show();
+								} else {
+									if (time >=  paramIn && time <= paramOut) {
+	//									doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
+									} else {
+										Toast.makeText(getApplicationContext(), "waktu absensi habis", Toast.LENGTH_SHORT).show();
+										Log.d(TAG, "onResponse: false" );
+									}
+
+								}
+
+
+
+//								Log.d(TAG, "onResponse: " + setTimeList.get(0).getParamIn());
+							}
+
+							@Override
+							public void onFailure(Call<GetSetTime> call, Throwable t) {
+								Log.d(TAG, "onFailure: " + t.getMessage());
+							}
+						});
+
+//						doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
 //					Log.d(TAG, "onResponse: " + npm);
 					}
 
@@ -181,7 +218,7 @@ public class AbsenActivity extends AppCompatActivity {
 
 	private void doAbsen(Integer userId, Integer kelasId, Integer pertemuanId, Integer stateId, Integer currentTime, Double latitute, Double longtitute, String predictName, Integer npm) {
 		Call<PostPutDelAbsen> call = mApiInterface.postAbsen(
-				userId, kelasId, pertemuanId, stateId, predictName, npm, "hadir", latitute, longtitute, currentTime
+				kelasId, userId, pertemuanId, stateId, predictName, npm, "hadir", latitute, longtitute, currentTime
 		);
 		call.enqueue(new Callback<PostPutDelAbsen>() {
 			@Override

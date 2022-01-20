@@ -22,6 +22,8 @@ public class ListAbsenActivity extends AppCompatActivity {
 
 	ListView lvAbsen;
 
+	String userId;
+
 	ApiInterface mApiInterface;
 
     @Override
@@ -29,10 +31,12 @@ public class ListAbsenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_absen);
 
+		userId = getIntent().getStringExtra("userId");
+
 		lvAbsen  = findViewById(R.id.lvAbsen);
 		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-		Call<GetAbsen> absenCall = mApiInterface.getAbsen(1);
+		Call<GetAbsen> absenCall = mApiInterface.getAbsen(Integer.valueOf(userId));
 		absenCall.enqueue(new Callback<GetAbsen>() {
 			@Override
 			public void onResponse(Call<GetAbsen> call, Response<GetAbsen> response) {

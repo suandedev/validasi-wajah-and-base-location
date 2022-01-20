@@ -42,6 +42,7 @@ public class HomeMhsActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent intent = new Intent(getApplicationContext(), ListAbsenActivity.class);
+				intent.putExtra("userId", userId);
 				startActivity(intent);
 			}
 		});

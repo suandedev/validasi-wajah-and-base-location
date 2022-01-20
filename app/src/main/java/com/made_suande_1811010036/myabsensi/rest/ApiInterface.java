@@ -5,6 +5,7 @@ import com.made_suande_1811010036.myabsensi.model.GetKelas;
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
 import com.made_suande_1811010036.myabsensi.model.GetMhs;
 import com.made_suande_1811010036.myabsensi.model.GetPertemuan;
+import com.made_suande_1811010036.myabsensi.model.GetSetTime;
 import com.made_suande_1811010036.myabsensi.model.GetState;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
 import com.made_suande_1811010036.myabsensi.model.Matkul;
@@ -28,8 +29,8 @@ public interface ApiInterface {
 	@GET("pertemuan")
 	Call<GetPertemuan> getPertemuan();
 
-	@GET("absen/{userId}")
-	Call<GetAbsen> getAbsen(@Path("userId") Integer userId);
+	@GET("absen")
+	Call<GetAbsen> getAbsen(@Query("userId") Integer userId);
 
 	@GET("auth")
 	Call<GetUsers> getUsers();
@@ -42,6 +43,11 @@ public interface ApiInterface {
 
 	@GET("mhs")
 	Call<GetMhs> getMhs(@Query("name") String name);
+
+	@GET("settime")
+	Call<GetSetTime> getSetTime(@Query("kelasId") int kelasId,
+								@Query("pertemuanId") int peremuanId,
+								@Query("stateId") int stateId);
 
 	@FormUrlEncoded
 	@POST("absen")
