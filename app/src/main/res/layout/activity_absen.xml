@@ -1,24 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-	android:orientation="vertical"
-    tools:context=".AbsenActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".AbsenActivity">
 
-	<TextView
-		android:id="@+id/pertemuan"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:textAlignment="center"
-		android:text="pertemuan ke"/>
+		android:orientation="vertical">
 
-	<Button
-		android:id="@+id/btnCekAbsen"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="cek absen"
-		android:layout_gravity="center"/>
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="absensi mahasiswa"
+			android:textAlignment="center" />
 
-</LinearLayout>
+		<ImageView
+			android:id="@+id/imageView"
+			android:layout_width="match_parent"
+			android:layout_height="270dp" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="prediksi nama" />
+
+		<TextView
+			android:id="@+id/prediksi"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textStyle="bold" />
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="persentase kecocokan" />
+
+		<TextView
+			android:id="@+id/presentase"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textStyle="bold" />
+
+		<Button
+			android:id="@+id/btnGetImage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="get image" />
+
+		<Button
+			android:id="@+id/btnAbsen"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="absen" />
+
+	</LinearLayout>
+
+</ScrollView>

@@ -3,6 +3,7 @@ package com.made_suande_1811010036.myabsensi.rest;
 import com.made_suande_1811010036.myabsensi.model.GetAbsen;
 import com.made_suande_1811010036.myabsensi.model.GetKelas;
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
+import com.made_suande_1811010036.myabsensi.model.GetMhs;
 import com.made_suande_1811010036.myabsensi.model.GetPertemuan;
 import com.made_suande_1811010036.myabsensi.model.GetState;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
@@ -38,6 +39,9 @@ public interface ApiInterface {
 
 	@GET("state")
 	Call<GetState> getState();
+
+	@GET("mhs")
+	Call<GetMhs> getMhs(@Query("name") String name);
 
 	@FormUrlEncoded
 	@POST("absen")

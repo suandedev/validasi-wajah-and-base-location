@@ -25,6 +25,9 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+	buildFeatures {
+		mlModelBinding true
+	}
 }
 
 dependencies {
@@ -41,5 +44,8 @@ dependencies {
 	implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
 	implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+	implementation 'org.tensorflow:tensorflow-lite-support:0.1.0'
+	implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
 
 }
