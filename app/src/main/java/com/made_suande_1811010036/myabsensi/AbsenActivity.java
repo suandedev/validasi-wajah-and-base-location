@@ -124,16 +124,13 @@ public class AbsenActivity extends AppCompatActivity {
 									Toast.makeText(getApplicationContext(), "foto tidak boleh kosong", Toast.LENGTH_SHORT).show();
 								} else {
 									if (time >=  paramIn && time <= paramOut) {
-	//									doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
+										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
 									} else {
 										Toast.makeText(getApplicationContext(), "waktu absensi habis", Toast.LENGTH_SHORT).show();
 										Log.d(TAG, "onResponse: false" );
 									}
 
 								}
-
-
-
 //								Log.d(TAG, "onResponse: " + setTimeList.get(0).getParamIn());
 							}
 

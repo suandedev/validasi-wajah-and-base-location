@@ -32,6 +32,9 @@ public interface ApiInterface {
 	@GET("absen")
 	Call<GetAbsen> getAbsen(@Query("userId") Integer userId);
 
+	@GET("absen")
+	Call<GetAbsen> getAbsenByDosen(@Query("kelasId") Integer kelasId);
+
 	@GET("auth")
 	Call<GetUsers> getUsers();
 
@@ -43,6 +46,9 @@ public interface ApiInterface {
 
 	@GET("mhs")
 	Call<GetMhs> getMhs(@Query("name") String name);
+
+	@GET("kelas/{userId}")
+	Call<GetKelas> getKelasByDosen(@Path("userId") int userId);
 
 	@GET("settime")
 	Call<GetSetTime> getSetTime(@Query("kelasId") int kelasId,

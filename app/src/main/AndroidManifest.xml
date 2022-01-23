@@ -4,8 +4,10 @@
 
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.CAMERA" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 	<application
 		android:allowBackup="true"
@@ -14,6 +16,21 @@
 		android:roundIcon="@mipmap/ic_launcher_round"
 		android:supportsRtl="true"
 		android:theme="@style/Theme.MyAbsensi">
+		<activity
+			android:name=".LocationActivity"
+			android:exported="false" />
+		<activity
+			android:name=".DetailAbsenByDosenActivity"
+			android:exported="false" />
+		<activity
+			android:name=".ListAbsenByDosenActivity"
+			android:exported="false" />
+		<activity
+			android:name=".KelasByDosenActivity"
+			android:exported="false" />
+		<activity
+			android:name=".HomeDosenActivity"
+			android:exported="false" />
 		<activity
 			android:name=".StateActivity"
 			android:exported="false" />
@@ -47,6 +64,18 @@
 		<activity
 			android:name=".MainActivity"
 			android:exported="false" />
+
+		<meta-data
+			android:name="com.google.android.geo.API_KEY"
+			android:value="AIzaSyDUS3uXezCtBtDruZpqXH5BAM04tgq50h4" />
+
+		<meta-data
+			android:name="com.google.android.gms.version"
+			android:value="@integer/google_play_services_version" />
+
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false" />
 	</application>
 
 </manifest>

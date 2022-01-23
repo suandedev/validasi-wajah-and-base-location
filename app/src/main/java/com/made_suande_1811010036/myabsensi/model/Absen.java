@@ -20,7 +20,7 @@ public class Absen {
 	private String npm;
 	@SerializedName("keterangan")
 	private String keterangan;
-	@SerializedName("laatitude")
+	@SerializedName("latitude")
 	private String latitude;
 	@SerializedName("longtitude")
 	private String longtitude;

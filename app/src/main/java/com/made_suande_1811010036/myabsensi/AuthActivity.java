@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
@@ -23,6 +24,7 @@ import retrofit2.Response;
 public class AuthActivity extends AppCompatActivity {
 
 	private Button btnLogin;
+	private EditText getEmail, getPassword;
 
 	private ApiInterface mApiInterface;
 
@@ -34,6 +36,8 @@ public class AuthActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_auth);
 
 		btnLogin = findViewById(R.id.login);
+		getEmail = findViewById(R.id.email);
+		getPassword = findViewById(R.id.password);
 
 		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
@@ -47,8 +51,8 @@ public class AuthActivity extends AppCompatActivity {
 						List<Users> usersList = response.body().getListDataUsers();
 
 						for (Users user : usersList) {
-							String email = "mahasiswa@gmail.com";
-							String password = "123";
+							String email = getEmail.getText().toString();
+							String password = getPassword.getText().toString();
 							if (email.equals(user.getEmail())) {
 								if (password.equals(user.getPassword())) {
 									if (user.getRule().equals("1")) {
@@ -57,8 +61,9 @@ public class AuthActivity extends AppCompatActivity {
 										Log.d("mydata", "onResponse: " + user.getRule());
 									}
 									if (user.getRule().equals("2")) {
-//										Intent intent = new Intent(getApplicationContext(), HomeDosenActivity.class);
-//										startActivity(intent);
+										Intent intent = new Intent(getApplicationContext(), HomeDosenActivity.class);
+										intent.putExtra("userId", user.getId());
+										startActivity(intent);
 										Log.d("mydata", "onResponse: " + user.getRule());
 									}
 									if (user.getRule().equals("3")) {

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailAbsenByDosenActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="detail absen mahasiswa"/>
+
+	<TextView
+		android:id="@+id/nama"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="nama : xx"
+		/>
+
+	<TextView
+		android:id="@+id/npm"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="npm : 12"
+		/>
+
+	<TextView
+		android:id="@+id/keterangan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="keterangan : xx"
+		/>
+
+	<TextView
+		android:id="@+id/lokasi"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="lokasi : f.2.1"/>
+
+	<Button
+		android:id="@+id/btnCekLokasi"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="cek lokasi"/>
+
+</LinearLayout>
