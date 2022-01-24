@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    tools:context=".HomeAdminActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="dashboard admin"/>
+
+	<Button
+		android:id="@+id/btnKelasByAdmin"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="kelas"
+		android:background="@drawable/simple_bg1"/>
+
+	<Button
+		android:id="@+id/btnTime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="time"
+		android:background="@drawable/simple_bg1"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="absen"
+		android:background="@drawable/simple_bg1"/>
+
+	<Button
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="user"
+		android:background="@drawable/simple_bg1"/>
+</LinearLayout>

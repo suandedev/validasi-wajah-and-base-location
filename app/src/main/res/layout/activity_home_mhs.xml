@@ -65,6 +65,24 @@
 
 		</LinearLayout>
 
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btnLogout"
+				android:layout_width="0dp"
+				android:layout_height="100dp"
+				android:layout_weight="1"
+				android:background="@drawable/simple_bg1"
+				android:elevation="5dp"
+				android:text="logout" />
+
+
+		</LinearLayout>
+
 	</LinearLayout>
 
 </ScrollView>

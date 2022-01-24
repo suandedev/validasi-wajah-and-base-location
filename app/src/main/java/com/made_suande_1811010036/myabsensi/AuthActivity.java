@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
@@ -53,26 +54,34 @@ public class AuthActivity extends AppCompatActivity {
 						for (Users user : usersList) {
 							String email = getEmail.getText().toString();
 							String password = getPassword.getText().toString();
+//							String email = "admin@gmail.com";
+//							String password = "123";
 							if (email.equals(user.getEmail())) {
 								if (password.equals(user.getPassword())) {
 									if (user.getRule().equals("1")) {
-//										Intent intent = new Intent(getApplicationContext(), HomeAdminActivity.class);
-//										startActivity(intent);
-										Log.d("mydata", "onResponse: " + user.getRule());
+										Intent intent = new Intent(getApplicationContext(), HomeAdminActivity.class);
+										intent.putExtra("userId", user.getId());
+										startActivity(intent);
+										finish();
+										Log.d("mydata", "onResponse: " + user.getId());
 									}
 									if (user.getRule().equals("2")) {
 										Intent intent = new Intent(getApplicationContext(), HomeDosenActivity.class);
 										intent.putExtra("userId", user.getId());
 										startActivity(intent);
+										finish();
 										Log.d("mydata", "onResponse: " + user.getRule());
 									}
 									if (user.getRule().equals("3")) {
 										Intent intent = new Intent(getApplicationContext(), HomeMhsActivity.class);
 										intent.putExtra("userId", user.getId());
 										startActivity(intent);
+										finish();
 										Log.d("mydata", "onResponse: " + user.getRule());
 									}
 								}
+							} else {
+								Toast.makeText(getApplicationContext(), "email or password incorrect", Toast.LENGTH_SHORT).show();
 							}
 
 						}

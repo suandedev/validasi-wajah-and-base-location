@@ -50,6 +50,28 @@
 			android:layout_height="wrap_content"
 			android:text="get image" />
 
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="keterangan hadir"/>
+
+		<EditText
+			android:id="@+id/keteranganAbsen"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="(hadir, izin, sakit)"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="lokasi absensi"/>
+
+		<EditText
+			android:id="@+id/lokasiAbsen"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="lokasi anda(nama ruangan).."/>
+
 		<Button
 			android:id="@+id/btnAbsen"
 			android:layout_width="wrap_content"

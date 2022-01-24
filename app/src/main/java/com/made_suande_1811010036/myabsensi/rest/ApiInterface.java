@@ -10,6 +10,7 @@ import com.made_suande_1811010036.myabsensi.model.GetState;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
 import com.made_suande_1811010036.myabsensi.model.Matkul;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
 
 import java.util.List;
 
@@ -64,7 +65,25 @@ public interface ApiInterface {
 									@Field("mahasiswa") String mahasiswa,
 									@Field("npm") int npm,
 									@Field("keterangan") String keterangan,
+									@Field("lokasi") String lokasi,
 									@Field("latitude") double latitute,
 									@Field("longtitude") double longtitude,
 									@Field("createdAt") int createdAt);
+
+	@FormUrlEncoded
+	@POST("settime")
+	Call<PostPutDelSetTime> postSetTime(@Field("kelasId") int kelasId,
+										@Field("pertemuanId") int pertemuanId,
+										@Field("stateId") int stateId,
+										@Field("dayIn") int dayIn,
+										@Field("monthIn") int monthIn,
+										@Field("yearIn") int yearIn,
+										@Field("hourIn") int hourIn,
+										@Field("minuteIn") int minuteIn,
+										@Field("dayOut") int dayOut,
+										@Field("monthOut") int monthOut,
+										@Field("yearOut") int yearOut,
+										@Field("hourOut") int hourOut,
+										@Field("minuteOut") int minuteOut
+										);
 }

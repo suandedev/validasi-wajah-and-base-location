@@ -55,12 +55,21 @@ public class StateActivity extends AppCompatActivity {
 				lvState.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-						Intent intent = new Intent(getApplicationContext(), AbsenActivity.class);
-						intent.putExtra("userId", userId);
-						intent.putExtra("kelasId", kelasId);
-						intent.putExtra("pertemuanId", pertemuanId);
-						intent.putExtra("stateId", state.get(i).getId());
-						startActivity(intent);
+						if (userId.equals("1")){
+							Intent intent = new Intent(getApplicationContext(), TimeActivity.class);
+							intent.putExtra("userId", userId);
+							intent.putExtra("kelasId", kelasId);
+							intent.putExtra("pertemuanId", pertemuanId);
+							intent.putExtra("stateId", state.get(i).getId());
+							startActivity(intent);
+						} else {
+							Intent intent = new Intent(getApplicationContext(), AbsenActivity.class);
+							intent.putExtra("userId", userId);
+							intent.putExtra("kelasId", kelasId);
+							intent.putExtra("pertemuanId", pertemuanId);
+							intent.putExtra("stateId", state.get(i).getId());
+							startActivity(intent);
+						}
 					}
 				});
 			}

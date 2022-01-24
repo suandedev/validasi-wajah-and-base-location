@@ -12,7 +12,7 @@ import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
 
 public class HomeMhsActivity extends AppCompatActivity {
 
-	private Button btnAbsen, btnKelasByMhs;
+	private Button btnAbsen, btnKelasByMhs, btnLogout;
 
 	private ApiInterface mApiInterface;
 
@@ -25,6 +25,7 @@ public class HomeMhsActivity extends AppCompatActivity {
 
         btnAbsen = findViewById(R.id.btnAbsen);
         btnKelasByMhs = findViewById(R.id.btnKelasByMhs);
+        btnLogout = findViewById(R.id.btnLogout);
 
 //        get string ekstra
 		String userId = getIntent().getStringExtra("userId");
@@ -46,5 +47,14 @@ public class HomeMhsActivity extends AppCompatActivity {
 				startActivity(intent);
 			}
 		});
+		btnLogout.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				finish();
+				Intent intent = new Intent(getApplicationContext(), AuthActivity.class);
+				startActivity(intent);
+			}
+		});
+
     }
 }

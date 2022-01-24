@@ -67,7 +67,7 @@ public class ListAbsenByDosenActivity extends AppCompatActivity {
 						intent.putExtra("keterangan", absenList.get(i).getKeterangan());
 						intent.putExtra("latitude", absenList.get(i).getLatitude());
 						intent.putExtra("longtitude", absenList.get(i).getLongtitude());
-						intent.putExtra("lokasi", "f21");
+						intent.putExtra("lokasi", absenList.get(i).getLokasi());
 						startActivity(intent);
 					}
 				});

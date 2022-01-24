@@ -21,6 +21,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -54,11 +55,12 @@ import retrofit2.Response;
 public class AbsenActivity extends AppCompatActivity {
 
 	TextView prediksi, presentase;
+	EditText keterangan, lokasi;
 	ImageView imageView;
 	Button btnGetImage, btnAbsen;
 	int imageSize = 224;
 
-	String predictName, userId, kelasId, pertemuanId, stateId, curentTime, npm;
+	String predictName, userId, kelasId, pertemuanId, stateId, curentTime, npm, getKeterangan, getNamaLokasi;
 	Double latitude, longtitute;
 
 	private ApiInterface mApiInterface;
@@ -76,9 +78,11 @@ public class AbsenActivity extends AppCompatActivity {
 		presentase = findViewById(R.id.presentase);
 		imageView = findViewById(R.id.imageView);
 		btnGetImage = findViewById(R.id.btnGetImage);
+		keterangan = findViewById(R.id.keteranganAbsen);
+		lokasi = findViewById(R.id.lokasiAbsen);
 		btnAbsen = findViewById(R.id.btnAbsen);
 
-        mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
@@ -123,10 +127,16 @@ public class AbsenActivity extends AppCompatActivity {
 								if (predictName == null) {
 									Toast.makeText(getApplicationContext(), "foto tidak boleh kosong", Toast.LENGTH_SHORT).show();
 								} else {
+									getNamaLokasi = lokasi.getText().toString();
 									if (time >=  paramIn && time <= paramOut) {
-										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm));
+										getKeterangan = keterangan.getText().toString();
+
+										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
 									} else {
-										Toast.makeText(getApplicationContext(), "waktu absensi habis", Toast.LENGTH_SHORT).show();
+										getKeterangan = "tanpa keterangan";
+										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
+
+										Toast.makeText(getApplicationContext(), "waktu absensi habis, anda tidak hadir", Toast.LENGTH_SHORT).show();
 										Log.d(TAG, "onResponse: false" );
 									}
 
@@ -213,9 +223,9 @@ public class AbsenActivity extends AppCompatActivity {
 
     }
 
-	private void doAbsen(Integer userId, Integer kelasId, Integer pertemuanId, Integer stateId, Integer currentTime, Double latitute, Double longtitute, String predictName, Integer npm) {
+	private void doAbsen(Integer userId, Integer kelasId, Integer pertemuanId, Integer stateId, Integer currentTime, Double latitute, Double longtitute, String predictName, Integer npm, String getKeterangan, String getNamaLokasi) {
 		Call<PostPutDelAbsen> call = mApiInterface.postAbsen(
-				kelasId, userId, pertemuanId, stateId, predictName, npm, "hadir", latitute, longtitute, currentTime
+				kelasId, userId, pertemuanId, stateId, predictName, npm, getKeterangan, getNamaLokasi, latitute, longtitute, currentTime
 		);
 		call.enqueue(new Callback<PostPutDelAbsen>() {
 			@Override
@@ -284,7 +294,7 @@ public class AbsenActivity extends AppCompatActivity {
 				}
 			}
 
-			String[] classes = {"made suande", "indra", "tomas"};
+			String[] classes = {"made suande", "indra wijaya", "septilia", "aprilia", "none"};
 			prediksi.setText(classes[maxPos]);
 			predictName = classes[maxPos];
 

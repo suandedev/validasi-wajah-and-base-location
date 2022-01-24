@@ -20,6 +20,8 @@ public class Absen {
 	private String npm;
 	@SerializedName("keterangan")
 	private String keterangan;
+	@SerializedName("lokasi")
+	private String lokasi;
 	@SerializedName("latitude")
 	private String latitude;
 	@SerializedName("longtitude")
@@ -29,7 +31,7 @@ public class Absen {
 
 	public Absen() {}
 
-	public Absen(String id, String kelasId, String userId, String pertemuanId, String stateId, String mahasiswa, String npm, String keterangan, String latitude, String longtitude, String createdAt) {
+	public Absen(String id, String kelasId, String userId, String pertemuanId, String stateId, String mahasiswa, String npm, String keterangan, String lokasi, String latitude, String longtitude, String createdAt) {
 		this.id = id;
 		this.kelasId = kelasId;
 		this.userId = userId;
@@ -38,6 +40,7 @@ public class Absen {
 		this.mahasiswa = mahasiswa;
 		this.npm = npm;
 		this.keterangan = keterangan;
+		this.lokasi = lokasi;
 		this.latitude = latitude;
 		this.longtitude = longtitude;
 		this.createdAt = createdAt;
@@ -105,6 +108,14 @@ public class Absen {
 
 	public void setKeterangan(String keterangan) {
 		this.keterangan = keterangan;
+	}
+
+	public String getLokasi() {
+		return lokasi;
+	}
+
+	public void setLokasi(String lokasi) {
+		this.lokasi = lokasi;
 	}
 
 	public String getLatitude() {
