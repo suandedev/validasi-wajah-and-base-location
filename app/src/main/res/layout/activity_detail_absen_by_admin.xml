@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".DetailAbsenByAdminActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="detail absen mahasiswa by admin" />
+
+	<TextView
+		android:id="@+id/nama"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="nama" />
+
+	<TextView
+		android:id="@+id/npm"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="npm" />
+
+	<TextView
+		android:id="@+id/keterangan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="keterangan" />
+
+	<TextView
+		android:id="@+id/lokasi"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="lokasi" />
+
+	<TextView
+		android:id="@+id/latitude"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="latitude" />
+
+	<TextView
+		android:id="@+id/longtitude"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="longtitude" />
+
+	<TextView
+		android:id="@+id/createdAt"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="created at" />
+
+
+</LinearLayout>

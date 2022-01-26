@@ -11,6 +11,7 @@ import com.made_suande_1811010036.myabsensi.model.GetUsers;
 import com.made_suande_1811010036.myabsensi.model.Matkul;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
 
 import java.util.List;
 
@@ -48,6 +49,9 @@ public interface ApiInterface {
 	@GET("state")
 	Call<GetState> getState();
 
+	@GET("absen")
+	Call<GetAbsen> getAllAbsen();
+
 	@GET("mhs")
 	Call<GetMhs> getMhs(@Query("name") String name);
 
@@ -58,6 +62,7 @@ public interface ApiInterface {
 	Call<GetSetTime> getSetTime(@Query("kelasId") int kelasId,
 								@Query("pertemuanId") int peremuanId,
 								@Query("stateId") int stateId);
+
 	@GET("users")
 	Call<GetUsers> getUserByAdmin();
 
@@ -90,7 +95,13 @@ public interface ApiInterface {
 										@Field("yearOut") int yearOut,
 										@Field("hourOut") int hourOut,
 										@Field("minuteOut") int minuteOut
-										);
+	);
+
+	@FormUrlEncoded
+	@POST("users")
+	Call<PostPutDelUsers> insertUser(@Field("email") String email,
+									 @Field("password") String password,
+									 @Field("rule") String rule);
 
 	@FormUrlEncoded
 	@PUT("users")
@@ -100,5 +111,5 @@ public interface ApiInterface {
 
 	@FormUrlEncoded
 	@HTTP(method = "DELETE", path = "users", hasBody = true)
-	Call<GetUsers> deleteUser(@Field("id") String id);
+	Call<PostPutDelUsers> deleteUser(@Field("id") String id);
 }

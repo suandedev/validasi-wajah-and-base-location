@@ -5,21 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserByAdminActivity">
+    tools:context=".ListAbsenByAdminActivity">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="user by admin"/>
-
-	<Button
-		android:id="@+id/btnInsertUser"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="insert"/>
+		android:text="list absen by admin"/>
 
 	<ListView
-		android:id="@+id/lvUserByAdmin"
+		android:id="@+id/lvKelasByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		/>

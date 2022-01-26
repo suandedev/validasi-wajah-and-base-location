@@ -5,23 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserByAdminActivity">
+    tools:context=".InsertUserActivity">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="user by admin"/>
+		android:text="inser new user"/>
 
-	<Button
-		android:id="@+id/btnInsertUser"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="insert"/>
-
-	<ListView
-		android:id="@+id/lvUserByAdmin"
+	<EditText
+		android:id="@+id/email"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		/>
+		android:hint="email"/>
+
+	<EditText
+		android:id="@+id/password"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="password" />
+
+	<EditText
+		android:id="@+id/rule"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="rule" />
+
+	<Button
+		android:id="@+id/btnSaveUser"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="save"/>
 
 </LinearLayout>

@@ -17,6 +17,15 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.MyAbsensi">
 		<activity
+			android:name=".DetailAbsenByAdminActivity"
+			android:exported="false" />
+		<activity
+			android:name=".ListAbsenByAdminActivity"
+			android:exported="false" />
+		<activity
+			android:name=".InsertUserActivity"
+			android:exported="false" />
+		<activity
 			android:name=".DetailUserByAdmin"
 			android:exported="false" />
 		<activity

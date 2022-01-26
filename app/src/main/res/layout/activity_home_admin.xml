@@ -27,6 +27,7 @@
 		android:background="@drawable/simple_bg1"/>
 
 	<Button
+		android:id="@+id/btnGetAbsenByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="absen"

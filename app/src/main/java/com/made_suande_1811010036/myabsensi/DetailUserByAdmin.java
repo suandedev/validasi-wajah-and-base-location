@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.made_suande_1811010036.myabsensi.model.GetAbsen;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
 import com.made_suande_1811010036.myabsensi.rest.ApiClient;
 import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
 
@@ -76,15 +77,15 @@ public class DetailUserByAdmin extends AppCompatActivity {
 		btnDeleteUser.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Call<GetUsers> call = mApiInterface.deleteUser(id);
-				call.enqueue(new Callback<GetUsers>() {
+				Call<PostPutDelUsers> call = mApiInterface.deleteUser(id);
+				call.enqueue(new Callback<PostPutDelUsers>() {
 					@Override
-					public void onResponse(Call<GetUsers> call, Response<GetUsers> response) {
-						Log.d(TAG, "onResponse: oke");
+					public void onResponse(Call<PostPutDelUsers> call, Response<PostPutDelUsers> response) {
+
 					}
 
 					@Override
-					public void onFailure(Call<GetUsers> call, Throwable t) {
+					public void onFailure(Call<PostPutDelUsers> call, Throwable t) {
 
 					}
 				});

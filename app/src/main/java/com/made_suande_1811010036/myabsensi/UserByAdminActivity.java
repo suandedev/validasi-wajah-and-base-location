@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.made_suande_1811010036.myabsensi.adapter.UsersAdapter;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
 import com.made_suande_1811010036.myabsensi.model.Users;
 import com.made_suande_1811010036.myabsensi.rest.ApiClient;
 import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
@@ -25,6 +27,8 @@ public class UserByAdminActivity extends AppCompatActivity {
 
 	ListView lvUserByAdmin;
 
+	Button btnInsertUser;
+
 	ApiInterface mApiInterface;
 
 	String TAG = "mydata";
@@ -37,12 +41,26 @@ public class UserByAdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_by_admin);
 
 		lvUserByAdmin = findViewById(R.id.lvUserByAdmin);
+		btnInsertUser = findViewById(R.id.btnInsertUser);
 
 		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
 		ma = this;
 		refresh();
+
+		btnInsertUser.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				insertUser();
+			}
+		});
     }
+
+	private void insertUser() {
+
+    	Intent intent = new Intent(getApplicationContext(), InsertUserActivity.class);
+    	startActivity(intent);
+	}
 
 	public void refresh() {
 		lvUserByAdmin.setAdapter(null);
