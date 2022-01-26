@@ -15,10 +15,13 @@ import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -55,6 +58,8 @@ public interface ApiInterface {
 	Call<GetSetTime> getSetTime(@Query("kelasId") int kelasId,
 								@Query("pertemuanId") int peremuanId,
 								@Query("stateId") int stateId);
+	@GET("users")
+	Call<GetUsers> getUserByAdmin();
 
 	@FormUrlEncoded
 	@POST("absen")
@@ -86,4 +91,14 @@ public interface ApiInterface {
 										@Field("hourOut") int hourOut,
 										@Field("minuteOut") int minuteOut
 										);
+
+	@FormUrlEncoded
+	@PUT("users")
+	Call<GetUsers> resetPasswordUser(@Field("email") String email,
+									 @Field("password") String password,
+									 @Field("rule") Integer rule);
+
+	@FormUrlEncoded
+	@HTTP(method = "DELETE", path = "users", hasBody = true)
+	Call<GetUsers> deleteUser(@Field("id") String id);
 }

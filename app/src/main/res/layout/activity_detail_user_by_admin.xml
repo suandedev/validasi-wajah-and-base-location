@@ -1,41 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:orientation="vertical"
-    tools:context=".HomeAdminActivity">
+    tools:context=".DetailUserByAdmin">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="dashboard admin"/>
+		android:text="detail user by admin"/>
 
 	<Button
-		android:id="@+id/btnKelasByAdmin"
+		android:id="@+id/btnDeleteUser"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="kelas"
-		android:background="@drawable/simple_bg1"/>
+		android:text="delete users"/>
+
+	<TextView
+		android:id="@+id/dEmail"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="email"/>
+
+	<TextView
+		android:id="@+id/dRule"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="dule"/>
 
 	<Button
-		android:id="@+id/btnTime"
-		android:layout_width="match_parent"
+		android:id="@+id/resetPassByAdmin"
+		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="time"
-		android:background="@drawable/simple_bg1"/>
+		android:text="reset password"/>
 
-	<Button
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="absen"
-		android:background="@drawable/simple_bg1"/>
 
-	<Button
-		android:id="@+id/btnUserByAdmin"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="user"
-		android:background="@drawable/simple_bg1"/>
 </LinearLayout>
