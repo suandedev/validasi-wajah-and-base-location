@@ -5,21 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KelasByAdminActivity">
+    tools:context=".SelectUserActivity">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="lict kelas by admin"/>
-
-	<Button
-		android:id="@+id/btnNewKelas"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="new kelas"/>
+		android:text="list user"/>
 
 	<ListView
-		android:id="@+id/lvKelasByAdmin"
+		android:id="@+id/lvSelectUser"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"/>
 

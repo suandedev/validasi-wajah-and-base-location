@@ -48,6 +48,8 @@ public class KelasActivity extends AppCompatActivity {
 
 				List<Kelas> kelasList = response.body().getListDataKelas();
 
+				Log.d(TAG, "onResponse: " + kelasList);
+
 				KelasAdapter adapter = new KelasAdapter(KelasActivity.this, kelasList);
 				lvKelasByMhs.setAdapter(adapter);
 

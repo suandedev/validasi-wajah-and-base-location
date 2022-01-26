@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".InsertKelasActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="insert new kelas by amdin" />
+
+	<EditText
+		android:id="@+id/eKelas"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="kelas" />
+
+	<EditText
+		android:id="@+id/eMatlul"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="matkul" />
+
+	<EditText
+		android:id="@+id/eJam"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="jam" />
+
+	<EditText
+		android:id="@+id/eRuangan"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="ruangan" />
+
+	<EditText
+		android:id="@+id/eDosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:hint="nama dosen" />
+
+	<Button
+		android:id="@+id/btnSaveKelas"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="save" />
+
+</LinearLayout>

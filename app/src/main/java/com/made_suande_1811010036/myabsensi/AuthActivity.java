@@ -52,10 +52,10 @@ public class AuthActivity extends AppCompatActivity {
 						List<Users> usersList = response.body().getListDataUsers();
 
 						for (Users user : usersList) {
-//							String email = getEmail.getText().toString();
-//							String password = getPassword.getText().toString();
-							String email = "admin@gmail.com";
-							String password = "123";
+							String email = getEmail.getText().toString();
+							String password = getPassword.getText().toString();
+//							String email = "admin@gmail.com";
+//							String password = "123";
 							if (email.equals(user.getEmail())) {
 								if (password.equals(user.getPassword())) {
 									if (user.getRule().equals("1")) {

@@ -10,6 +10,7 @@ import com.made_suande_1811010036.myabsensi.model.GetState;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
 import com.made_suande_1811010036.myabsensi.model.Matkul;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelKelas;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
 
@@ -108,6 +109,15 @@ public interface ApiInterface {
 	Call<GetUsers> resetPasswordUser(@Field("email") String email,
 									 @Field("password") String password,
 									 @Field("rule") Integer rule);
+
+	@FormUrlEncoded
+	@POST("kelas")
+	Call<PostPutDelKelas> postKelas(@Field("userId") String id,
+									@Field("kelas") String kelas,
+									@Field("matkul") String matkul,
+									@Field("jam") String jam,
+									@Field("ruangan") String ruangan,
+									@Field("dosen") String dosen);
 
 	@FormUrlEncoded
 	@HTTP(method = "DELETE", path = "users", hasBody = true)

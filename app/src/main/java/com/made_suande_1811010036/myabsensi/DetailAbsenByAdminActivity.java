@@ -40,11 +40,11 @@ public class DetailAbsenByAdminActivity extends AppCompatActivity {
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
         nama.setText("nama : "+ getNama);
-        npm.setText("nama : "+ getNpm);
-        keterangan.setText("nama : "+ getKEterangan);
-        lokasi.setText("nama : "+ getLokasi);
-        latitude.setText("nama : "+ getLatitude);
-        longtitude.setText("nama : "+ getLongtitude);
-        createdAt.setText("nama : "+ getCreatedAt);
+        npm.setText("npm : "+ getNpm);
+        keterangan.setText("keterangan : "+ getKEterangan);
+        lokasi.setText("lokasi : "+ getLokasi);
+        latitude.setText("latitude : "+ getLatitude);
+        longtitude.setText("latitude : "+ getLongtitude);
+        createdAt.setText("longtitude : "+ getCreatedAt);
     }
 }
