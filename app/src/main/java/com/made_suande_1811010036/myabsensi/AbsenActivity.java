@@ -32,9 +32,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.made_suande_1811010036.myabsensi.ml.Model;
 import com.made_suande_1811010036.myabsensi.model.GetMhs;
+import com.made_suande_1811010036.myabsensi.model.GetSetLocation;
 import com.made_suande_1811010036.myabsensi.model.GetSetTime;
 import com.made_suande_1811010036.myabsensi.model.Mhs;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
+import com.made_suande_1811010036.myabsensi.model.SetLocation;
 import com.made_suande_1811010036.myabsensi.model.SetTime;
 import com.made_suande_1811010036.myabsensi.rest.ApiClient;
 import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
@@ -45,8 +47,10 @@ import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Stack;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -54,10 +58,10 @@ import retrofit2.Response;
 
 public class AbsenActivity extends AppCompatActivity {
 
-	TextView prediksi, presentase;
+	TextView prediksi, presentase, locationStatus;
 	EditText keterangan, lokasi;
 	ImageView imageView;
-	Button btnGetImage, btnAbsen;
+	Button btnGetImage, btnAbsen, btnCekLocate;
 	int imageSize = 224;
 
 	String predictName, userId, kelasId, pertemuanId, stateId, curentTime, npm, getKeterangan, getNamaLokasi;
@@ -75,12 +79,14 @@ public class AbsenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_absen);
 
 		prediksi = findViewById(R.id.prediksi);
+		locationStatus = findViewById(R.id.locationStatus);
 		presentase = findViewById(R.id.presentase);
 		imageView = findViewById(R.id.imageView);
 		btnGetImage = findViewById(R.id.btnGetImage);
 		keterangan = findViewById(R.id.keteranganAbsen);
 		lokasi = findViewById(R.id.lokasiAbsen);
 		btnAbsen = findViewById(R.id.btnAbsen);
+		btnCekLocate = findViewById(R.id.btnCekLocate);
 
 		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
@@ -124,23 +130,41 @@ public class AbsenActivity extends AppCompatActivity {
 
 								Log.d(TAG, "onResponse: " + paramIn + " " + paramOut + " " + time);
 
-								if (predictName == null) {
-									Toast.makeText(getApplicationContext(), "foto tidak boleh kosong", Toast.LENGTH_SHORT).show();
-								} else {
-									getNamaLokasi = lokasi.getText().toString();
-									if (time >=  paramIn && time <= paramOut) {
-										getKeterangan = keterangan.getText().toString();
+								Call<GetSetLocation> call2 = mApiInterface.getSetLocation(Integer.parseInt(kelasId));
+								call2.enqueue(new Callback<GetSetLocation>() {
+									@Override
+									public void onResponse(Call<GetSetLocation> call, Response<GetSetLocation> response) {
+										List<SetLocation> setLocationList = response.body().getListDataSetLocation();
 
-										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
-									} else {
-										getKeterangan = "tanpa keterangan";
-										doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
+										if (predictName == null) {
+											Toast.makeText(getApplicationContext(), "foto tidak boleh kosong", Toast.LENGTH_SHORT).show();
+										} else {
+											getNamaLokasi = lokasi.getText().toString();
 
-										Toast.makeText(getApplicationContext(), "waktu absensi habis, anda tidak hadir", Toast.LENGTH_SHORT).show();
-										Log.d(TAG, "onResponse: false" );
+											if (latitude == Double.parseDouble(setLocationList.get(0).getLatitude()) && longtitute == Double.parseDouble(setLocationList.get(0).getLongtitude())) {
+												if (time >=  paramIn && time <= paramOut) {
+													getKeterangan = keterangan.getText().toString();
+
+													doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
+												} else {
+													getKeterangan = "tanpa keterangan";
+													doAbsen(Integer.valueOf(userId), Integer.valueOf(kelasId), Integer.valueOf(pertemuanId), Integer.valueOf(stateId), Integer.valueOf(curentTime), latitude, longtitute, predictName, Integer.valueOf(npm), getKeterangan, getNamaLokasi);
+
+													Toast.makeText(getApplicationContext(), "waktu absensi habis, anda tidak hadir", Toast.LENGTH_SHORT).show();
+													Log.d(TAG, "onResponse: false" );
+												}
+											} else {
+												Log.d(TAG, "onResponse: location dont macth" );
+											}
+
+										}
 									}
 
-								}
+									@Override
+									public void onFailure(Call<GetSetLocation> call, Throwable t) {
+										Log.d(TAG, "onFailure: " + t.getMessage());
+									}
+								});
 //								Log.d(TAG, "onResponse: " + setTimeList.get(0).getParamIn());
 							}
 
@@ -221,9 +245,17 @@ public class AbsenActivity extends AppCompatActivity {
 					new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 44);
 		}
 
+		btnCekLocate.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				cekLocation();
+			}
+		});
+
     }
 
 	private void doAbsen(Integer userId, Integer kelasId, Integer pertemuanId, Integer stateId, Integer currentTime, Double latitute, Double longtitute, String predictName, Integer npm, String getKeterangan, String getNamaLokasi) {
+//		Log.d(TAG, "doAbsen: " + userId + kelasId + pertemuanId + stateId + currentTime + latitute + longtitute + predictName + npm + getKeterangan + getNamaLokasi);
 		Call<PostPutDelAbsen> call = mApiInterface.postAbsen(
 				kelasId, userId, pertemuanId, stateId, predictName, npm, getKeterangan, getNamaLokasi, latitute, longtitute, currentTime
 		);
@@ -240,6 +272,32 @@ public class AbsenActivity extends AppCompatActivity {
 				Log.d(TAG, "onFailure: " + t.getMessage());
 			}
 		});
+	}
+
+	private void cekLocation() {
+    	Call<GetSetLocation> call = mApiInterface.getSetLocation(Integer.parseInt(kelasId));
+    	call.enqueue(new Callback<GetSetLocation>() {
+			@Override
+			public void onResponse(Call<GetSetLocation> call, Response<GetSetLocation> response) {
+				List<SetLocation> setLocationList = response.body().getListDataSetLocation();
+
+				if (latitude == Double.parseDouble(setLocationList.get(0).getLatitude()) && longtitute == Double.parseDouble(setLocationList.get(0).getLongtitude())) {
+					Toast.makeText(getApplicationContext(), "lokasi sesuai", Toast.LENGTH_SHORT).show();
+					locationStatus.setText("location status is true");
+//					Log.d(TAG, "onResponse: oke");
+				} else {
+					Toast.makeText(getApplicationContext(), "lokasi tidak sesuai", Toast.LENGTH_SHORT).show();
+					locationStatus.setText("location status is false");
+//					Log.d(TAG, "onResponse: false");
+				}
+			}
+
+			@Override
+			public void onFailure(Call<GetSetLocation> call, Throwable t) {
+				Log.d(TAG, "onFailure: " + t.getMessage());
+			}
+		});
+    	
 	}
 
 

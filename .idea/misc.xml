@@ -25,6 +25,9 @@
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_location.xml" value="0.1046875" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_pertemuan.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_select_user.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_set_kelas_location.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_set_location.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_state.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_time.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_user_by_admin.xml" value="0.1" />

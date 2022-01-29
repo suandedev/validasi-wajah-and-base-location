@@ -5,12 +5,14 @@ import com.made_suande_1811010036.myabsensi.model.GetKelas;
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
 import com.made_suande_1811010036.myabsensi.model.GetMhs;
 import com.made_suande_1811010036.myabsensi.model.GetPertemuan;
+import com.made_suande_1811010036.myabsensi.model.GetSetLocation;
 import com.made_suande_1811010036.myabsensi.model.GetSetTime;
 import com.made_suande_1811010036.myabsensi.model.GetState;
 import com.made_suande_1811010036.myabsensi.model.GetUsers;
 import com.made_suande_1811010036.myabsensi.model.Matkul;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelAbsen;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelKelas;
+import com.made_suande_1811010036.myabsensi.model.PostPutDelSetLocation;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
 
@@ -47,6 +49,9 @@ public interface ApiInterface {
 	@GET("kelas")
 	Call<GetKelas> getKelas();
 
+	@GET("kelas/{userId}")
+	Call<GetKelas> getKelasById(@Path("userId") String userId);
+
 	@GET("state")
 	Call<GetState> getState();
 
@@ -66,6 +71,9 @@ public interface ApiInterface {
 
 	@GET("users")
 	Call<GetUsers> getUserByAdmin();
+
+	@GET("setlocation/{kelasId}")
+	Call<GetSetLocation> getSetLocation(@Path("kelasId") int kelasId);
 
 	@FormUrlEncoded
 	@POST("absen")
@@ -118,6 +126,12 @@ public interface ApiInterface {
 									@Field("jam") String jam,
 									@Field("ruangan") String ruangan,
 									@Field("dosen") String dosen);
+
+	@FormUrlEncoded
+	@POST("setlocation")
+	Call<PostPutDelSetLocation> postSetLocation(@Field("kelasId") Integer kelasId,
+												@Field("latitude") Double latitude,
+												@Field("longtitude") Double longtitude);
 
 	@FormUrlEncoded
 	@HTTP(method = "DELETE", path = "users", hasBody = true)

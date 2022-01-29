@@ -21,56 +21,53 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class KelasActivity extends AppCompatActivity {
+public class SetKelasLocationActivity extends AppCompatActivity {
 
-	private ListView lvKelasByMhs;
-
-	private ApiInterface mApiInterface;
+	ListView lvSetKelasLocation;
 
 	String TAG = "mydata";
+	String userId;
+
+	ApiInterface mApiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_kelas);
+        setContentView(R.layout.activity_set_kelas_location);
 
-        lvKelasByMhs = findViewById(R.id.lvKelasbyMhs);
+		lvSetKelasLocation = findViewById(R.id.lvSetKelasLocation);
 
-        mApiInterface = ApiClient.getClient().create(ApiInterface.class);
+		mApiInterface = ApiClient.getClient().create(ApiInterface.class);
 
-//        string ekstra
-		String userId = getIntent().getStringExtra("userId");
+		userId = getIntent().getStringExtra("userId");
 
+		getKelas();
+    }
+
+	private void getKelas() {
 		Call<GetKelas> call = mApiInterface.getKelasById(userId);
 		call.enqueue(new Callback<GetKelas>() {
 			@Override
 			public void onResponse(Call<GetKelas> call, Response<GetKelas> response) {
-
 				List<Kelas> kelasList = response.body().getListDataKelas();
 
-				Log.d(TAG, "onResponse: " + kelasList);
+				KelasAdapter adapter = new KelasAdapter(SetKelasLocationActivity.this, kelasList);
+				lvSetKelasLocation.setAdapter(adapter);
 
-				KelasAdapter adapter = new KelasAdapter(KelasActivity.this, kelasList);
-				lvKelasByMhs.setAdapter(adapter);
-
-				lvKelasByMhs.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+				lvSetKelasLocation.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 					@Override
 					public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-						Intent intent = new Intent(getApplicationContext(), PertemuanActivity.class);
+						Intent intent = new Intent(getApplicationContext(), SetLocationActivity.class);
 						intent.putExtra("kelasId", kelasList.get(i).getId());
-						intent.putExtra("userId", userId);
 						startActivity(intent);
 					}
 				});
-
-				Log.d(TAG, "onResponse: " + response.body().getListDataKelas());
 			}
 
 			@Override
 			public void onFailure(Call<GetKelas> call, Throwable t) {
-				Log.d(TAG, "onFailure: " + t.getMessage());
+				Log.d(TAG, "onFailure: " +t.getMessage());
 			}
 		});
-
-    }
+	}
 }

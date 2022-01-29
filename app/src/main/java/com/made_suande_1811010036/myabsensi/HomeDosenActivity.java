@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class HomeDosenActivity extends AppCompatActivity {
 
-	Button btnGetAbsenByDosen, btnLogout;
+	Button btnGetAbsenByDosen, btnLogout, btnSetLocation;
 
 	String TAG = "mydata";
 
@@ -20,6 +20,7 @@ public class HomeDosenActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home_dosen);
 
         btnGetAbsenByDosen = findViewById(R.id.btnGetAbsenByDosen);
+		btnSetLocation = findViewById(R.id.btnSetLocation);
         btnLogout = findViewById(R.id.btnLogout);
 
 //        get string eksra
@@ -32,6 +33,24 @@ public class HomeDosenActivity extends AppCompatActivity {
 				Intent intent = new Intent(getApplicationContext(), KelasByDosenActivity.class);
 				intent.putExtra("userId", userId);
 				startActivity(intent);
+			}
+		});
+
+		btnSetLocation.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getApplicationContext(), SetKelasLocationActivity.class);
+				intent.putExtra("userId", userId);
+				startActivity(intent);
+			}
+		});
+
+		btnLogout.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getApplicationContext(), AuthActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
     }

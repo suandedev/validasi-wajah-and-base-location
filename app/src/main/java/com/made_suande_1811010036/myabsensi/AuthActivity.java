@@ -54,7 +54,7 @@ public class AuthActivity extends AppCompatActivity {
 						for (Users user : usersList) {
 							String email = getEmail.getText().toString();
 							String password = getPassword.getText().toString();
-//							String email = "admin@gmail.com";
+//							String email = "mhs@gmail.com";
 //							String password = "123";
 							if (email.equals(user.getEmail())) {
 								if (password.equals(user.getPassword())) {

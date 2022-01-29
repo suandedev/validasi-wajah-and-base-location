@@ -40,24 +40,30 @@
 		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:orientation="horizontal"
+			android:orientation="vertical"
 			android:layout_marginTop="10dp"
 			>
 
 			<Button
 				android:id="@+id/btnGetAbsenByDosen"
-				android:layout_width="0dp"
+				android:layout_width="match_parent"
 				android:layout_height="100dp"
-				android:layout_weight="1"
 				android:background="@drawable/simple_bg1"
 				android:elevation="5dp"
 				android:text="absen"/>
 
 			<Button
-				android:id="@+id/btnLogout"
-				android:layout_width="0dp"
+				android:id="@+id/btnSetLocation"
+				android:layout_width="match_parent"
 				android:layout_height="100dp"
-				android:layout_weight="1"
+				android:background="@drawable/simple_bg1"
+				android:elevation="5dp"
+				android:text="set Location" />
+
+			<Button
+				android:id="@+id/btnLogout"
+				android:layout_width="match_parent"
+				android:layout_height="100dp"
 				android:background="@drawable/simple_bg1"
 				android:elevation="5dp"
 				android:text="Logout"/>

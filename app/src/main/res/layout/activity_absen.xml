@@ -9,13 +9,17 @@
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:orientation="vertical">
+		android:orientation="vertical"
+		android:gravity="center"
+		android:padding="20dp">
 
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="absensi mahasiswa"
-			android:textAlignment="center" />
+			android:text="Form Absensi Mahasiswa"
+			android:textAlignment="center"
+			android:textSize="24sp"
+			android:textColor="@color/black"/>
 
 		<ImageView
 			android:id="@+id/imageView"
@@ -25,24 +29,32 @@
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="prediksi nama" />
+			android:text="Prediksi Nama"
+			android:textColor="@color/black"
+			android:textSize="18sp"/>
 
 		<TextView
 			android:id="@+id/prediksi"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textStyle="bold" />
+			android:textStyle="bold"
+			android:textSize="18sp"
+			android:textColor="@color/black"/>
 
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="persentase kecocokan" />
+			android:text="Persentase Kecocokan"
+			android:textColor="@color/black"
+			android:textSize="18sp"/>
 
 		<TextView
 			android:id="@+id/presentase"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textStyle="bold" />
+			android:textStyle="bold"
+			android:textSize="18sp"
+			android:textColor="@color/black"/>
 
 		<Button
 			android:id="@+id/btnGetImage"
@@ -53,7 +65,10 @@
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="keterangan hadir"/>
+			android:text="Keterangan Hadir"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:layout_marginTop="20dp"/>
 
 		<EditText
 			android:id="@+id/keteranganAbsen"
@@ -64,7 +79,10 @@
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="lokasi absensi"/>
+			android:text="Lokasi Absensi"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			android:layout_marginTop="10dp"/>
 
 		<EditText
 			android:id="@+id/lokasiAbsen"
@@ -76,7 +94,25 @@
 			android:id="@+id/btnAbsen"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="absen" />
+			android:text="absen"
+			android:layout_marginTop="10dp"/>
+
+		<TextView
+			android:id="@+id/locationStatus"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Location Status :"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:layout_marginTop="20dp"/>
+
+		<Button
+			android:id="@+id/btnCekLocate"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="cek lokasi"
+			android:layout_marginTop="10dp"
+			android:layout_marginBottom="20dp"/>
 
 	</LinearLayout>
 
