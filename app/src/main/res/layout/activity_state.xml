@@ -5,17 +5,25 @@
     android:layout_width="match_parent"
 	android:orientation="vertical"
     android:layout_height="match_parent"
+	android:padding="10dp"
     tools:context=".StateActivity">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:textAlignment="center"
-		android:text="state"/>
+		android:text="state"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"
+		/>
 
 	<ListView
 		android:id="@+id/lvState"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		/>
 
 </LinearLayout>

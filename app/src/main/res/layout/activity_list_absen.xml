@@ -5,16 +5,23 @@
 	android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ListAbsenActivity">
+    tools:context=".ListAbsenActivity"
+	android:padding="10dp">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="list absen"/>
+		android:text="list absen"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAllCaps="true"
+		android:textAlignment="center"
+		android:layout_marginTop="10dp"/>
 
 	<ListView
 		android:id="@+id/lvAbsen"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"/>
 
 </LinearLayout>

@@ -4,14 +4,15 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	tools:context=".AbsenActivity">
+	tools:context=".AbsenActivity"
+	android:padding="10dp">
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
 		android:gravity="center"
-		android:padding="20dp">
+		android:padding="10dp">
 
 		<TextView
 			android:layout_width="match_parent"
@@ -19,100 +20,138 @@
 			android:text="Form Absensi Mahasiswa"
 			android:textAlignment="center"
 			android:textSize="24sp"
-			android:textColor="@color/black"/>
+			android:textColor="@color/black"
+			android:textAllCaps="true"
+			/>
 
 		<ImageView
 			android:id="@+id/imageView"
 			android:layout_width="match_parent"
 			android:layout_height="270dp" />
 
-		<TextView
+		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="Prediksi Nama"
-			android:textColor="@color/black"
-			android:textSize="18sp"/>
+			android:orientation="vertical"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/bg_dark1"
+			android:padding="10dp"
+			>
 
-		<TextView
-			android:id="@+id/prediksi"
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Prediksi Nama"
+				android:textColor="@color/black"
+				android:textSize="18sp"/>
+
+			<TextView
+				android:id="@+id/prediksi"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textStyle="bold"
+				android:textSize="18sp"
+				android:textColor="@color/black"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Persentase Kecocokan"
+				android:textColor="@color/black"
+				android:textSize="18sp"
+				android:layout_marginTop="10dp"/>
+
+			<TextView
+				android:id="@+id/presentase"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textStyle="bold"
+				android:textSize="18sp"
+				android:textColor="@color/black"/>
+
+			<Button
+				android:id="@+id/btnGetImage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="get image"
+				android:layout_marginTop="10dp"
+				android:layout_gravity="center"/>
+
+		</LinearLayout>
+
+		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textStyle="bold"
-			android:textSize="18sp"
-			android:textColor="@color/black"/>
-
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Persentase Kecocokan"
-			android:textColor="@color/black"
-			android:textSize="18sp"/>
-
-		<TextView
-			android:id="@+id/presentase"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textStyle="bold"
-			android:textSize="18sp"
-			android:textColor="@color/black"/>
-
-		<Button
-			android:id="@+id/btnGetImage"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="get image" />
-
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Keterangan Hadir"
-			android:textColor="@color/black"
-			android:textSize="18sp"
-			android:layout_marginTop="20dp"/>
-
-		<EditText
-			android:id="@+id/keteranganAbsen"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:hint="(hadir, izin, sakit)"/>
-
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Lokasi Absensi"
-			android:textSize="18sp"
-			android:textColor="@color/black"
-			android:layout_marginTop="10dp"/>
-
-		<EditText
-			android:id="@+id/lokasiAbsen"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:hint="lokasi anda(nama ruangan).."/>
-
-		<Button
-			android:id="@+id/btnAbsen"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="absen"
-			android:layout_marginTop="10dp"/>
-
-		<TextView
-			android:id="@+id/locationStatus"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Location Status :"
-			android:textColor="@color/black"
-			android:textSize="18sp"
-			android:layout_marginTop="20dp"/>
-
-		<Button
-			android:id="@+id/btnCekLocate"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="cek lokasi"
+			android:orientation="vertical"
 			android:layout_marginTop="10dp"
-			android:layout_marginBottom="20dp"/>
+			android:padding="20dp"
+			android:background="@drawable/bg_dark1"
+			>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Keterangan Hadir"
+				android:textColor="@color/black"
+				android:textSize="18sp"/>
+
+			<EditText
+				android:id="@+id/keteranganAbsen"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="(hadir, izin, sakit)"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Lokasi Absensi"
+				android:textSize="18sp"
+				android:textColor="@color/black"
+				android:layout_marginTop="10dp"/>
+
+			<EditText
+				android:id="@+id/lokasiAbsen"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:hint="lokasi anda(nama ruangan).."/>
+
+			<Button
+				android:id="@+id/btnAbsen"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="absen"
+				android:layout_marginTop="10dp"
+				android:layout_gravity="center"
+				/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginTop="20dp"
+			android:padding="10dp"
+			android:background="@drawable/bg_dark1"
+			>
+
+			<TextView
+				android:id="@+id/locationStatus"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Location Status :"
+				android:textColor="@color/black"
+				android:textSize="18sp"/>
+
+			<Button
+				android:id="@+id/btnCekLocate"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="cek lokasi"
+				android:layout_marginTop="10dp"
+				android:layout_gravity="center"/>
+
+		</LinearLayout>
 
 	</LinearLayout>
 

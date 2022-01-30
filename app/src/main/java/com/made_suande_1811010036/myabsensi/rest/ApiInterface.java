@@ -86,6 +86,9 @@ public interface ApiInterface {
 	@GET("dosen/{userId}")
 	Call<GetDosen> getDosenByUserId(@Path("userId") String userId);
 
+	@GET("mhsbyuserid/{userId}")
+	Call<GetMhs> getMhsByUserId(@Path("userId") String userId);
+
 	@FormUrlEncoded
 	@POST("absen")
 	Call<PostPutDelAbsen> postAbsen(@Field("kelasId") int kelasId,

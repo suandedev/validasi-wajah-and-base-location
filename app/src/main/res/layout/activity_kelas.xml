@@ -10,17 +10,22 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:orientation="vertical"
-		android:padding="20dp">
+		android:padding="10dp">
 
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="choose kelas"/>
+			android:text="choose kelas"
+			android:textAlignment="center"
+			android:textSize="24sp"
+			android:textColor="@color/black"
+			android:textAllCaps="true"/>
 
 		<ListView
 			android:id="@+id/lvKelasbyMhs"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"/>
+			android:layout_height="match_parent"
+			android:layout_marginTop="10dp"/>
 
 	</LinearLayout>
 
