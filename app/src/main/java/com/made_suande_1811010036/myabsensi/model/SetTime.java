@@ -12,6 +12,14 @@ public class SetTime {
 	private String pertemuanId;
 	@SerializedName("stateId")
 	private String stateId;
+	@SerializedName("pertemuan")
+	private String pertemuan;
+	@SerializedName("matkul")
+	private String matkul;
+	@SerializedName("kelas")
+	private String kelas;
+	@SerializedName("state")
+	private String state;
 	@SerializedName("paramIn")
 	private String paramIn;
 	@SerializedName("paramOut")
@@ -21,11 +29,15 @@ public class SetTime {
 
 	}
 
-	public SetTime(String id, String kelasId, String pertemuanId, String stateId, String paramIn, String paramOut) {
+	public SetTime(String id, String kelasId, String pertemuanId, String stateId, String pertemuan, String matkul, String kelas, String state, String paramIn, String paramOut) {
 		this.id = id;
 		this.kelasId = kelasId;
 		this.pertemuanId = pertemuanId;
 		this.stateId = stateId;
+		this.pertemuan = pertemuan;
+		this.matkul = matkul;
+		this.kelas = kelas;
+		this.state = state;
 		this.paramIn = paramIn;
 		this.paramOut = paramOut;
 	}
@@ -60,6 +72,38 @@ public class SetTime {
 
 	public void setStateId(String stateId) {
 		this.stateId = stateId;
+	}
+
+	public String getPertemuan() {
+		return pertemuan;
+	}
+
+	public void setPertemuan(String pertemuan) {
+		this.pertemuan = pertemuan;
+	}
+
+	public String getMatkul() {
+		return matkul;
+	}
+
+	public void setMatkul(String matkul) {
+		this.matkul = matkul;
+	}
+
+	public String getKelas() {
+		return kelas;
+	}
+
+	public void setKelas(String kelas) {
+		this.kelas = kelas;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	public String getParamIn() {

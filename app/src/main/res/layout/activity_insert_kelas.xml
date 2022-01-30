@@ -5,47 +5,82 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".InsertKelasActivity">
+	tools:context=".InsertKelasActivity"
+	android:padding="10dp"
+	>
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="insert new kelas by amdin" />
+		android:text="insert new kelas by amdin"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textAllCaps="true"
+		android:textAlignment="center"
+		android:layout_marginTop="10dp"
+		/>
 
-	<EditText
-		android:id="@+id/eKelas"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:hint="kelas" />
+		android:orientation="vertical"
+		android:padding="10dp"
+		android:background="@drawable/bg_dark1"
+		>
 
-	<EditText
-		android:id="@+id/eMatlul"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="matkul" />
+		<EditText
+			android:id="@+id/eKelas"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="kelas"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<EditText
-		android:id="@+id/eJam"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="jam" />
+		<EditText
+			android:id="@+id/eMatlul"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="matkul"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<EditText
-		android:id="@+id/eRuangan"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="ruangan" />
+		<EditText
+			android:id="@+id/eJam"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="jam"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<EditText
-		android:id="@+id/eDosen"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="nama dosen" />
+		<EditText
+			android:id="@+id/eRuangan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="ruangan"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<Button
-		android:id="@+id/btnSaveKelas"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="save" />
+		<EditText
+			android:id="@+id/eDosen"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="nama dosen"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
+
+		<Button
+			android:id="@+id/btnSaveKelas"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="save"
+			android:layout_gravity="center"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
 
 </LinearLayout>

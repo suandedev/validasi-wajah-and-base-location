@@ -3,34 +3,48 @@
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
+	android:padding="20dp"
 	android:background="@drawable/bg_white_shadow"
-	android:padding="20dp">
+	>
 
 	<TextView
-		android:id="@+id/sEmail"
+		android:id="@+id/smatkul"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="email"
-		android:textSize="18sp"
 		android:textColor="@color/black"
-		/>
+		android:textSize="18sp"
+		android:text="matkul"/>
 
 	<TextView
-		android:id="@+id/sPassword"
+		android:id="@+id/skelas"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="password"
-		android:textSize="18sp"
 		android:textColor="@color/black"
-		/>
+		android:textSize="18sp"
+		android:text="kelas"/>
 
 	<TextView
-		android:id="@+id/sRule"
+		android:id="@+id/spertemuan"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="rule"
-		android:textSize="18sp"
 		android:textColor="@color/black"
-		/>
+		android:textSize="18sp"
+		android:text="pertemuan"/>
+
+	<TextView
+		android:id="@+id/sstate"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:textSize="18sp"
+		android:text="state"/>
+
+	<TextView
+		android:id="@+id/sparamIn"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textColor="@color/black"
+		android:textSize="18sp"
+		android:text="param in"/>
 
 </LinearLayout>

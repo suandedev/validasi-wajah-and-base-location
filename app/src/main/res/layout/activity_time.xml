@@ -1,55 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".TimeActivity">
+	android:padding="10dp"
+	tools:context=".TimeActivity">
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
 		android:orientation="vertical">
 
 		<TextView
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="halaman time"/>
+			android:text="halaman time"
+			android:textAlignment="center"
+			android:textColor="@color/black"
+			android:textSize="24sp" />
 
-		<TextView
+		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="set time param in"/>
-		<TimePicker
-			android:id="@+id/timePikerIn"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"/>
+			android:orientation="vertical"
+			android:padding="10dp"
+			android:layout_marginTop="10dp"
+			android:background="@drawable/bg_dark1"
+			>
 
-		<DatePicker
-			android:id="@+id/datePikerIn"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="set time param in"
+				android:textSize="18sp"
+				android:textColor="@color/black"
+				/>
 
-		<TextView
+			<TimePicker
+				android:id="@+id/timePikerIn"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				/>
+
+			<DatePicker
+				android:id="@+id/datePikerIn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				/>
+
+		</LinearLayout>
+
+		<LinearLayout
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:text="set time param in"/>
-		<TimePicker
-			android:id="@+id/timePikerOut"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"/>
+			android:orientation="vertical"
+			android:padding="10dp"
+			android:layout_marginTop="20dp"
+			android:background="@drawable/bg_dark1"
+			>
 
-		<DatePicker
-			android:id="@+id/datePikerOut"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"/>
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="set time param out"
+				android:textColor="@color/black"
+				android:textSize="18dp"
+				/>
 
-		<Button
-			android:id="@+id/btnSaveTime"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="save"/>
+			<TimePicker
+				android:id="@+id/timePikerOut"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				/>
+
+			<DatePicker
+				android:id="@+id/datePikerOut"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				/>
+
+			<Button
+				android:id="@+id/btnSaveTime"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="save"
+				android:layout_gravity="center"
+				android:layout_marginTop="10dp"
+				/>
+
+		</LinearLayout>
 
 	</LinearLayout>
 

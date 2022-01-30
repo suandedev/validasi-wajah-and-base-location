@@ -17,6 +17,12 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.MyAbsensi">
 		<activity
+			android:name=".DetailSetTimeActivity"
+			android:exported="false" />
+		<activity
+			android:name=".ListSetTimeActivity"
+			android:exported="false" />
+		<activity
 			android:name=".UpdateLocationActivity"
 			android:exported="false" />
 		<activity

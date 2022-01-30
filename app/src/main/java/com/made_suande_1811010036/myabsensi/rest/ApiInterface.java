@@ -89,6 +89,9 @@ public interface ApiInterface {
 	@GET("mhsbyuserid/{userId}")
 	Call<GetMhs> getMhsByUserId(@Path("userId") String userId);
 
+	@GET("settime")
+	Call<GetSetTime> getSetTime();
+
 	@FormUrlEncoded
 	@POST("absen")
 	Call<PostPutDelAbsen> postAbsen(@Field("kelasId") int kelasId,
@@ -161,4 +164,8 @@ public interface ApiInterface {
 	@FormUrlEncoded
 	@HTTP(method = "DELETE", path = "setlocation", hasBody = true)
 	Call<PostPutDelSetLocation> deleteLocation(@Field("id") String id);
+
+	@FormUrlEncoded
+	@HTTP(method = "DELETE", path = "setTime", hasBody = true)
+	Call<PostPutDelSetTime> deleteTime(@Field("id") String id);
 }

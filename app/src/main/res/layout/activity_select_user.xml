@@ -5,16 +5,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectUserActivity">
+    tools:context=".SelectUserActivity"
+	android:padding="10dp"
+	>
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="list user"/>
+		android:text="list user"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textAlignment="center"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"
+		/>
 
 	<ListView
 		android:id="@+id/lvSelectUser"
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"/>
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		/>
 
 </LinearLayout>

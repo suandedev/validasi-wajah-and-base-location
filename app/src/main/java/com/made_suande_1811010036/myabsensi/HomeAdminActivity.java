@@ -37,7 +37,8 @@ public class HomeAdminActivity extends AppCompatActivity {
         btnTime.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(getApplicationContext(), KelasActivity.class);
+				Intent intent = new Intent(getApplicationContext(), ListSetTimeActivity.class);
+//				Intent intent = new Intent(getApplicationContext(), KelasActivity.class);
 				intent.putExtra("userId", userId);
 				startActivity(intent);
 			}

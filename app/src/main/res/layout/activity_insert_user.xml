@@ -5,35 +5,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InsertUserActivity">
+    tools:context=".InsertUserActivity"
+	android:padding="10dp">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="inser new user"/>
+		android:text="inser new user"
+		android:textAlignment="center"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"
+		/>
 
-	<EditText
-		android:id="@+id/email"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:hint="email"/>
+		android:layout_marginTop="10dp"
+		android:padding="10dp"
+		android:background="@drawable/bg_dark1"
+		android:orientation="vertical"
+		>
 
-	<EditText
-		android:id="@+id/password"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="password" />
+		<EditText
+			android:id="@+id/email"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="email"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<EditText
-		android:id="@+id/rule"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:hint="rule" />
+		<EditText
+			android:id="@+id/password"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="password"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<Button
-		android:id="@+id/btnSaveUser"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="save"/>
+		<EditText
+			android:id="@+id/rule"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:hint="rule"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
+
+		<Button
+			android:id="@+id/btnSaveUser"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="save"
+			android:layout_gravity="center"
+			android:layout_marginTop="10dp"
+			/>
+
+	</LinearLayout>
 
 </LinearLayout>

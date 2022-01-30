@@ -13,6 +13,7 @@
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_absen_by_dosen.xml" value="0.14666666666666667" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_matkul.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_set_location.xml" value="0.11865942028985507" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_set_time.xml" value="0.10054347826086957" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_user_by_admin.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_get_set_location.xml" value="0.11865942028985507" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_admin.xml" value="0.1" />
@@ -26,6 +27,7 @@
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen_by_admin.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen_by_dosen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_set_time.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_location.xml" value="0.1046875" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_pertemuan.xml" value="0.1" />
@@ -40,6 +42,7 @@
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_matkul_all.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_pertemuan.xml" value="0.25869565217391305" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_set_location.xml" value="0.11865942028985507" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_set_time.xml" value="0.10054347826086957" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_state.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_users.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/single_absen_by_admin.xml" value="0.1" />

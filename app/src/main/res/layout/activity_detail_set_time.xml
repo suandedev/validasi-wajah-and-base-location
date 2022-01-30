@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailSetTimeActivity"
+	android:padding="10dp"
+	android:orientation="vertical"
+	>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="detail set time"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAlignment="center"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"
+		/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:layout_marginTop="10dp"
+		android:background="@drawable/bg_dark1"
+		android:padding="10dp"
+		>
+
+		<TextView
+			android:id="@+id/dtmatkul"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:text="matkul"/>
+
+		<TextView
+			android:id="@+id/dtkelas"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:text="kelas"/>
+
+		<TextView
+			android:id="@+id/dtpertemuan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:text="pertemuan"/>
+
+		<TextView
+			android:id="@+id/dtstate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:text="state"/>
+
+		<TextView
+			android:id="@+id/dtparamIn"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:text="param in"/>
+
+		<TextView
+			android:id="@+id/dtparamOut"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="param out"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:layout_marginTop="10dp"
+			>
+
+			<Button
+				android:id="@+id/btnDeleteSetTime"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="delete"
+				android:layout_marginLeft="5dp"
+				android:backgroundTint="@color/red"
+				/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

@@ -5,38 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 	android:orientation="vertical"
-    tools:context=".HomeAdminActivity">
+    tools:context=".HomeAdminActivity"
+	android:padding="10dp">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="dashboard admin"/>
+		android:text="dashboard admin"
+		android:textAllCaps="true"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAlignment="center"
+		android:textStyle="bold"
+		android:layout_marginTop="10dp"/>
 
 	<Button
 		android:id="@+id/btnKelasByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="kelas"
-		android:background="@drawable/simple_bg1"/>
+		android:background="@drawable/simple_bg1"
+		android:layout_marginTop="10dp"
+		/>
 
 	<Button
 		android:id="@+id/btnTime"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="time"
-		android:background="@drawable/simple_bg1"/>
+		android:background="@drawable/simple_bg1"
+		android:layout_marginTop="10dp"
+		/>
 
 	<Button
 		android:id="@+id/btnGetAbsenByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="absen"
-		android:background="@drawable/simple_bg1"/>
+		android:background="@drawable/simple_bg1"
+		android:layout_marginTop="10dp"
+		/>
 
 	<Button
 		android:id="@+id/btnUserByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:text="user"
-		android:background="@drawable/simple_bg1"/>
+		android:background="@drawable/simple_bg1"
+		android:layout_marginTop="10dp"
+		/>
 </LinearLayout>
