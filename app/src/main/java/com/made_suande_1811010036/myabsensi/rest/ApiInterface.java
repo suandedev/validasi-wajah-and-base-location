@@ -15,6 +15,7 @@ import com.made_suande_1811010036.myabsensi.model.PostPutDelKelas;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelSetLocation;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelSetTime;
 import com.made_suande_1811010036.myabsensi.model.PostPutDelUsers;
+import com.made_suande_1811010036.myabsensi.model.SetLocation;
 
 import java.util.List;
 
@@ -75,6 +76,12 @@ public interface ApiInterface {
 	@GET("setlocation/{kelasId}")
 	Call<GetSetLocation> getSetLocation(@Path("kelasId") int kelasId);
 
+	@GET("setlocationbyid/{id}")
+	Call<GetSetLocation> getSetLocationById(@Path("id") int id);
+
+	@GET("setlocation")
+	Call<GetSetLocation> getSetLocationAll();
+
 	@FormUrlEncoded
 	@POST("absen")
 	Call<PostPutDelAbsen> postAbsen(@Field("kelasId") int kelasId,
@@ -119,6 +126,13 @@ public interface ApiInterface {
 									 @Field("rule") Integer rule);
 
 	@FormUrlEncoded
+	@PUT("setlocation")
+	Call<SetLocation> updateLocation(@Field("id") Integer id,
+									 @Field("kelasId") Integer kelasId,
+									 @Field("latitude") Double latitude,
+									 @Field("longtitude") Double longtitude);
+
+	@FormUrlEncoded
 	@POST("kelas")
 	Call<PostPutDelKelas> postKelas(@Field("userId") String id,
 									@Field("kelas") String kelas,
@@ -136,4 +150,8 @@ public interface ApiInterface {
 	@FormUrlEncoded
 	@HTTP(method = "DELETE", path = "users", hasBody = true)
 	Call<PostPutDelUsers> deleteUser(@Field("id") String id);
+
+	@FormUrlEncoded
+	@HTTP(method = "DELETE", path = "setlocation", hasBody = true)
+	Call<PostPutDelSetLocation> deleteLocation(@Field("id") String id);
 }

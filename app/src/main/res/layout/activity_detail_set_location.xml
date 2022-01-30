@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".DetailSetLocationActivity"
+	>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="20dp"
+		android:background="@drawable/simple_bg1">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="detail lokasi kelas"
+			android:textSize="24sp"
+			android:textColor="@color/black"
+			android:textAlignment="center"/>
+
+		<TextView
+			android:id="@+id/dlatitude"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="latitude"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			android:layout_marginTop="10dp"/>
+
+		<TextView
+			android:id="@+id/dlongtitude"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="longtitude"
+			android:textColor="@color/black"
+			android:textSize="18sp"/>
+
+		<TextView
+			android:id="@+id/ddosen"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="dosen"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+		<TextView
+			android:id="@+id/druangan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="ruangan"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+		<TextView
+			android:id="@+id/djam"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="jam"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+		<TextView
+			android:id="@+id/dmatkul"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="matkul"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+		<TextView
+			android:id="@+id/dkelas"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="kelas"
+			android:textColor="@color/black"
+			android:textSize="18sp" />
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_gravity="center"
+		android:gravity="center"
+		android:layout_marginTop="15dp">
+
+		<Button
+			android:id="@+id/btnUpdateLocation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="update"
+			android:backgroundTint="@color/teal_200"
+			android:layout_marginRight="10dp"/>
+
+		<Button
+			android:id="@+id/btnDeleteLocation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="delete"
+			android:layout_marginLeft="10dp"
+			android:backgroundTint="@color/red"/>
+
+	</LinearLayout>
+
+</LinearLayout>

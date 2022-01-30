@@ -60,6 +60,7 @@ public class SetKelasLocationActivity extends AppCompatActivity {
 						Intent intent = new Intent(getApplicationContext(), SetLocationActivity.class);
 						intent.putExtra("kelasId", kelasList.get(i).getId());
 						startActivity(intent);
+						finish();
 					}
 				});
 			}

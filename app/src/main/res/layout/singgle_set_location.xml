@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="20dp">
+
+	<TextView
+		android:id="@+id/kelasByDosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="kelas"
+		android:textSize="18sp"
+		android:textColor="@color/black"/>
+
+	<TextView
+		android:id="@+id/matkulByDosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="matkul"
+		android:textColor="@color/black"
+		android:textSize="18sp" />
+	<TextView
+		android:id="@+id/latitudeByDosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="latitude"
+		android:textSize="18sp"
+		android:textColor="@color/black"/>
+	<TextView
+		android:id="@+id/longtitudeByDosen"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="longtitude"
+		android:textSize="18sp"
+		android:textColor="@color/black"/>
+
+</LinearLayout>

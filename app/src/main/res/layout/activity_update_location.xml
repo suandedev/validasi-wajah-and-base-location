@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateLocationActivity">
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="update location for this class" />
+
+
+	<Button
+		android:id="@+id/btnGetLocation"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="get base location" />
+
+	<TextView
+		android:id="@+id/latitude"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="latitude is :" />
+
+	<TextView
+		android:id="@+id/longtitude"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="longtitude is :" />
+
+	<Button
+		android:id="@+id/btnSaveLocation"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="save location" />
+
+</LinearLayout>

@@ -17,6 +17,15 @@
 		android:supportsRtl="true"
 		android:theme="@style/Theme.MyAbsensi">
 		<activity
+			android:name=".UpdateLocationActivity"
+			android:exported="false" />
+		<activity
+			android:name=".DetailSetLocationActivity"
+			android:exported="false" />
+		<activity
+			android:name=".GetSetLocationActivity"
+			android:exported="false" />
+		<activity
 			android:name=".SetLocationActivity"
 			android:exported="false" />
 		<activity

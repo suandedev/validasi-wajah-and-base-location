@@ -39,7 +39,7 @@ public class HomeDosenActivity extends AppCompatActivity {
 		btnSetLocation.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Intent intent = new Intent(getApplicationContext(), SetKelasLocationActivity.class);
+				Intent intent = new Intent(getApplicationContext(), GetSetLocationActivity.class);
 				intent.putExtra("userId", userId);
 				startActivity(intent);
 			}

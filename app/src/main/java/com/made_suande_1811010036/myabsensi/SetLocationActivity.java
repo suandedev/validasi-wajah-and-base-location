@@ -89,6 +89,8 @@ public class SetLocationActivity extends AppCompatActivity {
 			public void onResponse(Call<PostPutDelSetLocation> call, Response<PostPutDelSetLocation> response) {
 				Log.d(TAG, "onResponse: " + response.message());
 				Toast.makeText(getApplicationContext(), "insert succesfully", Toast.LENGTH_SHORT).show();
+				finish();
+				GetSetLocationActivity.sla.getSetLocation();
 			}
 
 			@Override
