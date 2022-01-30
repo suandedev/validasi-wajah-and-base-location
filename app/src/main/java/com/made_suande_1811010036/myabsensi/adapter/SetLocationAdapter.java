@@ -38,10 +38,10 @@ public class SetLocationAdapter extends ArrayAdapter<SetLocation> {
 
 		SetLocation setLocation = setLocationList.get(position);
 
-		tvKelas.setText("kelas : "+setLocation.getKelas());
-		tvMatkul.setText("mata kuliah : "+setLocation.getMatkul());
-		tvLatitude.setText("latitude : "+setLocation.getLatitude());
-		tvLongtitude.setText("longtitude : "+setLocation.getLongtitude());
+		tvKelas.setText("Kelas : "+setLocation.getKelas());
+		tvMatkul.setText("Mata Kuliah : "+setLocation.getMatkul());
+		tvLatitude.setText("Latitude : "+setLocation.getLatitude());
+		tvLongtitude.setText("Longtitude : "+setLocation.getLongtitude());
 
 		return v;
 	}

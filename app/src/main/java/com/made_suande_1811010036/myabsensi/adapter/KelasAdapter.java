@@ -37,9 +37,9 @@ public class KelasAdapter extends ArrayAdapter<Kelas> {
 
 		Kelas kelas = kelasList.get(position);
 
-		tvDosen.setText(kelas.getDosen());
-		tvKelas.setText(kelas.getKelas());
-		tvMatkul.setText(kelas.getMatkul());
+		tvDosen.setText("Dosen : "+kelas.getDosen());
+		tvKelas.setText("Kelas : "+kelas.getKelas());
+		tvMatkul.setText("Matkul : "+kelas.getMatkul());
 		return v;
 	}
 }

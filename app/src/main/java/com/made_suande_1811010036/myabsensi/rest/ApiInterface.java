@@ -1,6 +1,7 @@
 package com.made_suande_1811010036.myabsensi.rest;
 
 import com.made_suande_1811010036.myabsensi.model.GetAbsen;
+import com.made_suande_1811010036.myabsensi.model.GetDosen;
 import com.made_suande_1811010036.myabsensi.model.GetKelas;
 import com.made_suande_1811010036.myabsensi.model.GetMatkul;
 import com.made_suande_1811010036.myabsensi.model.GetMhs;
@@ -81,6 +82,9 @@ public interface ApiInterface {
 
 	@GET("setlocation")
 	Call<GetSetLocation> getSetLocationAll();
+
+	@GET("dosen/{userId}")
+	Call<GetDosen> getDosenByUserId(@Path("userId") String userId);
 
 	@FormUrlEncoded
 	@POST("absen")

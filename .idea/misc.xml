@@ -3,24 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/drawable/bg_dark1.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/drawable/bg_white_shadow.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/drawable/simple_bg1.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_absen.xml" value="0.12" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_absen_by_admin.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_auth.xml" value="0.11820652173913043" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_absen_by_admin.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_absen_by_dosen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_absen_by_dosen.xml" value="0.14666666666666667" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_matkul.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_set_location.xml" value="0.11865942028985507" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_detail_user_by_admin.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_get_set_location.xml" value="0.11865942028985507" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_admin.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_dosen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_dosen.xml" value="0.22" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_home_mhs.xml" value="0.16666666666666666" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_insert_kelas.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_insert_user.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_kelas.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_kelas_by_admin.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_kelas_by_dosen.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_kelas_by_dosen.xml" value="0.22" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen_by_admin.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/activity_list_absen_by_dosen.xml" value="0.1" />
@@ -41,7 +43,7 @@
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_state.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/singgle_users.xml" value="0.1" />
         <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/single_absen_by_admin.xml" value="0.1" />
-        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/single_absen_by_mhs.xml" value="0.1" />
+        <entry key="..\:/xampp/htdocs/my-absensi/android/app/src/main/res/layout/single_absen_by_mhs.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>

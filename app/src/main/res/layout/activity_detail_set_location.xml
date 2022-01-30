@@ -6,22 +6,27 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical"
 	tools:context=".DetailSetLocationActivity"
+	android:padding="10dp"
 	>
+
+	<TextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="detail lokasi kelas"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAlignment="center"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"/>
 
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:orientation="vertical"
-		android:padding="20dp"
-		android:background="@drawable/simple_bg1">
-
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="detail lokasi kelas"
-			android:textSize="24sp"
-			android:textColor="@color/black"
-			android:textAlignment="center"/>
+		android:background="@drawable/bg_dark1"
+		android:padding="10dp"
+		android:layout_marginTop="10dp"
+		android:elevation="3dp">
 
 		<TextView
 			android:id="@+id/dlatitude"
@@ -80,32 +85,34 @@
 			android:textColor="@color/black"
 			android:textSize="18sp" />
 
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_gravity="center"
+			android:gravity="center"
+			android:layout_marginTop="15dp">
+
+			<Button
+				android:id="@+id/btnUpdateLocation"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="update"
+				android:backgroundTint="@color/teal_200"
+				android:layout_marginRight="10dp"/>
+
+			<Button
+				android:id="@+id/btnDeleteLocation"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="delete"
+				android:layout_marginLeft="10dp"
+				android:backgroundTint="@color/red"/>
+
+		</LinearLayout>
+
 	</LinearLayout>
 
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal"
-		android:layout_gravity="center"
-		android:gravity="center"
-		android:layout_marginTop="15dp">
 
-		<Button
-			android:id="@+id/btnUpdateLocation"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="update"
-			android:backgroundTint="@color/teal_200"
-			android:layout_marginRight="10dp"/>
-
-		<Button
-			android:id="@+id/btnDeleteLocation"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:text="delete"
-			android:layout_marginLeft="10dp"
-			android:backgroundTint="@color/red"/>
-
-	</LinearLayout>
 
 </LinearLayout>

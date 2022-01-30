@@ -10,9 +10,16 @@
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="list absen by kelas x dosen x"/>
+		android:text="list absen mahasiswa"
+		android:textColor="@color/black"
+		android:textSize="24sp"
+		android:textAlignment="center"
+		android:layout_marginTop="10dp"
+		android:textAllCaps="true"
+		/>
 
 	<ListView
+		android:layout_marginTop="10dp"
 		android:id="@+id/lvLihatAbsenByDosen"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"

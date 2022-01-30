@@ -5,44 +5,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailAbsenByDosenActivity">
+    tools:context=".DetailAbsenByDosenActivity"
+	android:padding="10dp">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="detail absen mahasiswa"/>
+		android:text="detail absen mahasiswa"
+		android:textAlignment="center"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAllCaps="true"/>
 
-	<TextView
-		android:id="@+id/nama"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="nama : xx"
-		/>
+		android:orientation="vertical"
+		android:background="@drawable/bg_dark1"
+		android:padding="10dp"
+		android:layout_marginTop="10dp"
+		android:elevation="3dp">
 
-	<TextView
-		android:id="@+id/npm"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="npm : 12"
-		/>
+		<TextView
+			android:id="@+id/nama"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="nama : xx"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			/>
 
-	<TextView
-		android:id="@+id/keterangan"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="keterangan : xx"
-		/>
+		<TextView
+			android:id="@+id/npm"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="npm : 12"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			/>
 
-	<TextView
-		android:id="@+id/lokasi"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="lokasi : f.2.1"/>
+		<TextView
+			android:id="@+id/keterangan"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="keterangan : xx"
+			android:textColor="@color/black"
+			android:textSize="18sp"
+			/>
 
-	<Button
-		android:id="@+id/btnCekLokasi"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="cek lokasi"/>
+		<TextView
+			android:id="@+id/lokasi"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="lokasi : f.2.1"
+			android:textSize="18sp"
+			android:textColor="@color/black"/>
+
+		<Button
+			android:id="@+id/btnCekLokasi"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="cek lokasi"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:layout_marginTop="10dp"
+			android:backgroundTint="@color/teal_200" />
+
+	</LinearLayout>
 
 </LinearLayout>

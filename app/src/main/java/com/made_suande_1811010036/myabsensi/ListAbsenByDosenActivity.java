@@ -42,6 +42,8 @@ public class ListAbsenByDosenActivity extends AppCompatActivity {
 
         kelasId = getIntent().getStringExtra("kelasId");
 
+//		Log.d(TAG, "onCreate: " + kelasId);
+
         getAbsenByDosen();
     }
 

@@ -5,37 +5,64 @@
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical"
-	tools:context=".SetLocationActivity">
+	tools:context=".SetLocationActivity"
+	android:padding="10dp">
 
 	<TextView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="set location for this class" />
+		android:text="set location for this class"
+		android:textAlignment="center"
+		android:textSize="24sp"
+		android:textColor="@color/black"
+		android:textAllCaps="true"
+		android:layout_marginTop="10dp"/>
 
 
 	<Button
 		android:id="@+id/btnGetLocation"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="get base location" />
+		android:text="get base location"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		android:backgroundTint="@color/teal_700"/>
 
-	<TextView
-		android:id="@+id/latitude"
+	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="latitude is :" />
+		android:orientation="vertical"
+		android:background="@drawable/bg_dark1"
+		android:elevation="3dp"
+		android:padding="10dp"
+		android:layout_marginTop="10dp"
+		>
 
-	<TextView
-		android:id="@+id/longtitude"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:text="longtitude is :" />
+		<TextView
+			android:id="@+id/latitude"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="latitude is :"
+			android:textColor="@color/black"
+			android:textSize="18sp"/>
 
-	<Button
-		android:id="@+id/btnSaveLocation"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="save location" />
+		<TextView
+			android:id="@+id/longtitude"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="longtitude is :"
+			android:textSize="18sp"
+			android:textColor="@color/black"/>
+
+		<Button
+			android:id="@+id/btnSaveLocation"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="save location"
+			android:layout_gravity="center"
+			android:backgroundTint="@color/teal_200"/>
+
+	</LinearLayout>
 
 
 </LinearLayout>

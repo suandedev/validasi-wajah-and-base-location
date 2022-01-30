@@ -2,24 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
-	android:layout_height="wrap_content">
+	android:layout_height="wrap_content"
+	android:background="@drawable/bg_white_shadow"
+	android:padding="20dp">
 
 	<TextView
 		android:id="@+id/dosen"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="dosen"/>
+		android:text="dosen"
+		android:textSize="20sp"
+		android:textColor="@color/black"/>
 
 	<TextView
 		android:id="@+id/kelas"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="kelas" />
+		android:text="kelas"
+		android:textColor="@color/black"
+		android:textSize="18sp"/>
 
 	<TextView
 		android:id="@+id/matkul"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="matkul" />
+		android:text="matkul"
+		android:textSize="18sp"
+		android:textColor="@color/black"/>
 
 </LinearLayout>

@@ -37,9 +37,9 @@ public class AbsenAdapterByMhs extends ArrayAdapter<Absen> {
 
 		Absen absen = absenList.get(position);
 
-		tvNpm.setText(absen.getNpm());
-		tvName.setText(absen.getMahasiswa());
-		tvKeterangan.setText(absen.getKeterangan());
+		tvNpm.setText("NPM : "+absen.getNpm());
+		tvName.setText("Nama : "+absen.getMahasiswa());
+		tvKeterangan.setText("Keterangan : "+absen.getKeterangan());
 
 		return v;
 	}
