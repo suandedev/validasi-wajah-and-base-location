@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class HomeAdminActivity extends AppCompatActivity {
 
-	Button btnKelasByAdmin, btnTime, btnUserByAdmin, btnGetAbsenByAdmin;
+	Button btnKelasByAdmin, btnTime, btnUserByAdmin, btnGetAbsenByAdmin, btnLogout;
 
 	String userId;
 
@@ -22,6 +22,7 @@ public class HomeAdminActivity extends AppCompatActivity {
 		btnTime = findViewById(R.id.btnTime);
 		btnUserByAdmin = findViewById(R.id.btnUserByAdmin);
 		btnGetAbsenByAdmin = findViewById(R.id.btnGetAbsenByAdmin);
+		btnLogout = findViewById(R.id.btnLogout);
 
 		userId = getIntent().getStringExtra("userId");
 
@@ -57,6 +58,15 @@ public class HomeAdminActivity extends AppCompatActivity {
 			public void onClick(View view) {
 				Intent intent = new Intent(getApplicationContext(), ListAbsenByAdminActivity.class);
 				startActivity(intent);
+			}
+		});
+
+		btnLogout.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getApplicationContext(), AuthActivity.class);
+				startActivity(intent);
+				finish();
 			}
 		});
     }

@@ -13,6 +13,8 @@ import com.made_suande_1811010036.myabsensi.R;
 import com.made_suande_1811010036.myabsensi.model.SetLocation;
 import com.made_suande_1811010036.myabsensi.model.SetTime;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class SetTimeAdapter extends ArrayAdapter<SetTime> {
@@ -39,11 +41,17 @@ public class SetTimeAdapter extends ArrayAdapter<SetTime> {
 
 		SetTime setTime = setTimeList.get(position);
 
+		long unixSecondsIn = Long.parseLong(setTime.getParamIn());
+
+		Date dateIn = new java.util.Date(unixSecondsIn*1000L);
+		SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String fdateIn = sdf.format(dateIn);
+
 		tvMatkul.setText("mata kuliah : "+setTime.getMatkul());
 		tvKelas.setText("kelas : "+setTime.getKelas());
 		tvPertemuan.setText("pertemuan : "+setTime.getPertemuan());
 		tvState.setText("state : "+setTime.getState());
-		tvParamIn.setText("param in : "+setTime.getParamIn());
+		tvParamIn.setText("param in : "+fdateIn);
 
 		return v;
 	}

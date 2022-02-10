@@ -2,24 +2,36 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:orientation="vertical">
+	android:orientation="vertical"
+	android:background="@drawable/bg_white_shadow"
+	android:padding="20dp"
+	>
 
 	<TextView
 		android:id="@+id/npmByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="npm" />
+		android:text="npm"
+		android:textSize="18sp"
+		android:textColor="@color/black"
+		/>
 
 	<TextView
 		android:id="@+id/namaMhsByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="nama" />
+		android:text="nama"
+		android:textSize="18sp"
+		android:textColor="@color/black"
+		/>
 
 	<TextView
 		android:id="@+id/keteranganByAdmin"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="keterangan" />
+		android:text="keterangan"
+		android:textSize="18sp"
+		android:textColor="@color/black"
+		/>
 
 </LinearLayout>

@@ -66,7 +66,7 @@ public interface ApiInterface {
 	@GET("kelas/{userId}")
 	Call<GetKelas> getKelasByDosen(@Path("userId") int userId);
 
-	@GET("settime")
+	@GET("setTime")
 	Call<GetSetTime> getSetTime(@Query("kelasId") int kelasId,
 								@Query("pertemuanId") int peremuanId,
 								@Query("stateId") int stateId);
@@ -74,22 +74,22 @@ public interface ApiInterface {
 	@GET("users")
 	Call<GetUsers> getUserByAdmin();
 
-	@GET("setlocation/{kelasId}")
+	@GET("setLocation/{kelasId}")
 	Call<GetSetLocation> getSetLocation(@Path("kelasId") int kelasId);
 
-	@GET("setlocationbyid/{id}")
+	@GET("setLocationById/{id}")
 	Call<GetSetLocation> getSetLocationById(@Path("id") int id);
 
-	@GET("setlocation")
+	@GET("setLocation")
 	Call<GetSetLocation> getSetLocationAll();
 
 	@GET("dosen/{userId}")
 	Call<GetDosen> getDosenByUserId(@Path("userId") String userId);
 
-	@GET("mhsbyuserid/{userId}")
+	@GET("mhsByUserId/{userId}")
 	Call<GetMhs> getMhsByUserId(@Path("userId") String userId);
 
-	@GET("settime")
+	@GET("setTime")
 	Call<GetSetTime> getSetTime();
 
 	@FormUrlEncoded
@@ -107,7 +107,7 @@ public interface ApiInterface {
 									@Field("createdAt") int createdAt);
 
 	@FormUrlEncoded
-	@POST("settime")
+	@POST("setTime")
 	Call<PostPutDelSetTime> postSetTime(@Field("kelasId") int kelasId,
 										@Field("pertemuanId") int pertemuanId,
 										@Field("stateId") int stateId,
@@ -136,7 +136,7 @@ public interface ApiInterface {
 									 @Field("rule") Integer rule);
 
 	@FormUrlEncoded
-	@PUT("setlocation")
+	@PUT("setLocation")
 	Call<SetLocation> updateLocation(@Field("id") Integer id,
 									 @Field("kelasId") Integer kelasId,
 									 @Field("latitude") Double latitude,
@@ -152,7 +152,7 @@ public interface ApiInterface {
 									@Field("dosen") String dosen);
 
 	@FormUrlEncoded
-	@POST("setlocation")
+	@POST("setLocation")
 	Call<PostPutDelSetLocation> postSetLocation(@Field("kelasId") Integer kelasId,
 												@Field("latitude") Double latitude,
 												@Field("longtitude") Double longtitude);
@@ -162,7 +162,7 @@ public interface ApiInterface {
 	Call<PostPutDelUsers> deleteUser(@Field("id") String id);
 
 	@FormUrlEncoded
-	@HTTP(method = "DELETE", path = "setlocation", hasBody = true)
+	@HTTP(method = "DELETE", path = "setLocation", hasBody = true)
 	Call<PostPutDelSetLocation> deleteLocation(@Field("id") String id);
 
 	@FormUrlEncoded

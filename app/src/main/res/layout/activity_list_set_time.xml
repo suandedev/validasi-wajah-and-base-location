@@ -19,6 +19,16 @@
 		android:layout_marginTop="10dp"
 		/>
 
+	<Button
+		android:id="@+id/btnInsertSetTime"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="insert set time"
+		android:layout_gravity="center"
+		android:layout_marginTop="10dp"
+		android:backgroundTint="@color/teal_200"
+		/>
+
 	<ListView
 		android:id="@+id/lvSetTime"
 		android:layout_width="match_parent"

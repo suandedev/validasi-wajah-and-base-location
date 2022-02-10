@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.made_suande_1811010036.myabsensi.adapter.SetTimeAdapter;
 import com.made_suande_1811010036.myabsensi.model.GetSetTime;
+import com.made_suande_1811010036.myabsensi.model.Kelas;
 import com.made_suande_1811010036.myabsensi.model.SetTime;
 import com.made_suande_1811010036.myabsensi.rest.ApiClient;
 import com.made_suande_1811010036.myabsensi.rest.ApiInterface;
@@ -30,6 +32,8 @@ public class ListSetTimeActivity extends AppCompatActivity {
 	public static ListSetTimeActivity lta;
 
 	String TAG = "mydata";
+	String userId;
+	Button btnInsertSetTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +41,23 @@ public class ListSetTimeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_set_time);
 
         lvSetTime = findViewById(R.id.lvSetTime);
+		btnInsertSetTime = findViewById(R.id.btnInsertSetTime);
 
         mApiInterface = ApiClient.getClient().create(ApiInterface.class);
         lta = this;
 
+        userId = getIntent().getStringExtra("userId");
+
         getListSetTime();
+
+		btnInsertSetTime.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				Intent intent = new Intent(getApplicationContext(), KelasActivity.class);
+				intent.putExtra("userId", userId);
+				startActivity(intent);
+			}
+		});
     }
 
 	public void getListSetTime() {

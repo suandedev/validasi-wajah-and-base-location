@@ -352,7 +352,7 @@ public class AbsenActivity extends AppCompatActivity {
 				}
 			}
 
-			String[] classes = {"made suande", "indra wijaya", "septilia", "aprilia", "none", "hendri"};
+			String[] classes = {"made suande", "none", "Tomas Wilson", "septiana tri utami"};
 			prediksi.setText(classes[maxPos]);
 			predictName = classes[maxPos];
 
